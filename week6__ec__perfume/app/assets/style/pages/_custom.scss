@@ -63,7 +63,7 @@
 
 // product
 //
-.p-productNav {
+.brandNav {
   display: flex;
   &__item {
     margin-right: 28px;
@@ -84,7 +84,7 @@
 
 // member
 //
-.p-memberNav {
+.memberNav {
   &__item.active {
     a {
       padding-bottom: 2px;
