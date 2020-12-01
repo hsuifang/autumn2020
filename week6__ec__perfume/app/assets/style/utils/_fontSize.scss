@@ -1,0 +1,20 @@
+// Size
+// 為一般文字及icon設定節點大小
+@each $breakpoints in map-keys($grid-breakpoints) {
+  @each $keySize, $value in $fontSizes {
+    $mediaBk: $breakpoints;
+    @if($keySize == 'xs') {
+      $mediaBk: ''
+    }
+    @include media-breakpoint-up($mediaBk) {
+      $infix: breakpoint-infix($mediaBk, $grid-breakpoints);
+      .fsz#{$infix}-#{$keySize} {
+        font-size: $value !important;
+        line-height: 1.5;
+      }
+      .iconSize#{$infix}-#{$keySize} {
+        font-size: $value;
+      }
+    }
+  }
+}

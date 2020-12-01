@@ -1,0 +1,7 @@
+public
+node_modules
+.publish
+.vscode
+.DS_Store
+dist/assets/style/all.css.map
+dist/assets/js/app.js.map
