@@ -23,7 +23,7 @@ $(function () {
     document.getElementById("alertText").innerText = alertText;
     setTimeout(function () {
       $('#alertInfoModal').modal('hide');
-    }, 1500);
+    }, 3000);
   }
 });
 //# sourceMappingURL=app.js.map

@@ -20,7 +20,7 @@ $(function() {
   function alertInfoModal(alertText = '') {
     $('#alertInfoModal').modal('show')
     document.getElementById("alertText").innerText = alertText
-    setTimeout(function() { $('#alertInfoModal').modal('hide') }, 1500)
+    setTimeout(function() { $('#alertInfoModal').modal('hide') }, 3000)
   }
   
 });
