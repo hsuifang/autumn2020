@@ -1,0 +1,163 @@
+// reset
+@import "reset";
+
+// base
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+
+*, *:after, *:before {
+  position: relative;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans TC', sans-serif, "微軟正黑體";
+  font-size: 16px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// variables
+$primary: #415165;
+$secondary: #96A9C4;
+$dark: #000;
+$white: #fff;
+$alert: #A00404;
+$maxWidth: 1200px;
+
+// helpers
+.mb-lg {
+  margin-bottom: 72px !important;;
+}
+// components - list
+.list {
+  &__title {
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $dark;
+    span {
+      color: $alert;
+      font-size: 24px;
+      top: -4px;
+      font-weight: bold;
+      padding-left: 16px;
+    }
+  }
+  &__item {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+}
+
+// layout | page
+.container {
+  max-width: $maxWidth;
+  margin: auto;
+}
+
+.header {
+  padding-top: 30px;
+  &__title {
+    padding: 17px 0;
+    font-size: 80px;
+    line-height: 94px;
+    font-weight: bold;
+    border-bottom: 2px solid $dark;
+  }
+  img {
+    padding: 48px 0;
+  }
+}
+
+.p-skills {
+  padding: 24px 0 36px;
+  background-color: $primary;
+  .list {
+    max-width: 996px;
+    margin: auto;
+    text-align: center;
+    .list__title {
+      text-align: center;
+      line-height: 45px;
+      margin-bottom: 40px;
+      color: $white;
+      border-color: $white;
+      span {
+        color: $white;
+      }
+    }
+    ul {
+      padding-left: 24px;
+      border-left: 1px solid $secondary;
+      display: inline-block;
+      li.list__item {
+        color: $white;
+        margin-bottom: 20px;
+      }
+      li.list__item:last-of-type {
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.p-work {
+  .list ul {
+      border-left: 1px solid $secondary;
+      padding-left: 24px;
+      margin-left: 24px;
+      li.list__item {
+        h3 {
+          font-size: 24px;
+          line-height: 36px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        img {
+          padding: 8px 0;
+        }
+      }
+  }
+}
+.footer {
+  background-color: $primary;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  .list {
+    .list__title {
+      text-align: center;
+      color: $white;
+      line-height: 43px;
+      margin-bottom: 32px;
+      border-color: $white;
+      span {
+        color: $white;
+      }
+    }
+    ul li.list__item {
+      text-align: center;
+      margin-bottom: 16px;
+      color: $white;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a {
+        color: $white;
+        margin-right: 24px;
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-bottom: 2px solid $white;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
