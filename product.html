@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+
+</head>
+
+<body>
+  <header class="sticky-top bg-white">
+    <nav class="navigation py-1 py-md-2">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <h1 class="navigation__brand">
+            <a href="index.html">Perfume</a>
+          </h1>
+          <!-- main -->
+          <ul class="d-md-flex d-none">
+            <li class="navigation__item">
+              <a class="navigation__link" href="product.html">
+                <span class="material-icons">store_mall_directory</span>
+                Product
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="login.html">
+                <span class="material-icons">person</span>
+                log in
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <span class="material-icons">favorite</span>
+                Wishlist</a>
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                <span class="nav-icon material-icons">shopping_cart</span>
+                Cart(3)
+              </a>
+            </li>
+          </ul>
+          <!-- mobile toggle -->
+          <div class="d-flex d-md-none align-items-center">
+            <a class="d-flex justify-content-center d-lg-none iconAlertInfo mr-3" href="#">
+              <span class="text-light material-icons">shopping_cart</span>
+              <span class="iconAlertInfo__text">3</span>
+            </a>
+            <div class="navigation__toggle border-0" id="js-mobileMenuToggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- mobile -->
+      <div>
+        <ul class="mobileMenu d-md-none" id="mobileMenu">
+          <li class="mobileMenu__item">
+            <a href="product.html">Product</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="#">Wishlist</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="#">Blog</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="#">Contact</a>
+          </li>
+          <li class="mobileMenu__item">
+            <a href="login.html">log in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <nav class="bg-primary d-md-block d-none">
+  <div class="container">
+    <ul class="brandNav">
+      <li class="brandNav__item"><a href="#">CHANEL</a></li>
+      <li class="brandNav__item"><a href="#">Jo Malone</a></li>
+      <li class="brandNav__item"><a href="#">Curology</a></li>
+      <li class="brandNav__item"><a href="#">Dior</a></li>
+      <li class="brandNav__item"><a href="#">Chloe</a></li>
+      <li class="brandNav__item"><a href="#">ZARA</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="page-padding-2 container">
+  <ul class="row">
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products1.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/product2.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products3.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products4.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products5.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/index4.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products7.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products8.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/index3.png?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products10.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products11.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+    <li class="py-0 pb-4 pb-md-6 col-6 col-sm-4 col-md-3">
+      <div class="productCard">
+        <div class="productCard__img">
+          <img src="assets/images/products12.jpg?raw=true">
+          <a class="btn-overlay" href="productDetail.html">查看更多</a>
+        </div>
+        <div class="productCard__info">
+          <h4>Poppy & Barley</h4>
+          <p>Jo Malone</p>
+          <div class="d-flex">
+            <p class="mr-1">NT$1,380</p>
+            <p class="text-light"><del>NT,580</del></p>
+          </div>
+        </div>
+        <div class="productCard__action">
+          <a href="#" class="js-wishlist material-icons text-primary iconSize-4">favorite</a>
+          <a href="#" class="js-addCart material-icons text-primary iconSize-4">shopping_cart</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="pagination d-flex justify-content-center">
+    <li class="pagination__item pagination__item--active"><a href="#">1</a></li>
+    <li class="pagination__item"><a href="#">2</a></li>
+    <li class="pagination__item"><a href="#">3</a></li>
+  </ul>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="row py-6">
+      <div class="col-md-4 py-5">
+        <h2 class="text-light mb-3">記得 <br/>
+            訂閱以獲取更多資訊！
+        </h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control border-primary py-3 px-2" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary px-3" type="button" id="button-addon2">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- modal -->
+<div class="modal fade" id="alertInfoModal" tabindex="-1" role="dialog" aria-labelledby="alertInfoModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="alert alert-white text-center" role="alert">
+          <p id="alertText" class="text-primary"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer class="bg-primary py-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <a href="index.html"><img class="mr-4" src="https://hexschool.github.io/webLayoutTraining1st/perfume-week6/d’Perfumewhite.png"
+            alt="logo"></a>
+          <p class="text-white fsz-2">© 2020. All Rights Reserved.</p>
+        </div>
+        <ul class="list-unstyled d-none d-md-flex">
+          <li class="mr-5"><a href="product.html" class="text-white fsz-4">Product</a></li>
+          <li class="mr-5"><a href="#" class="text-white fsz-4">Blog</a></li>
+          <li><a href="#" class="text-white fsz-4">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
