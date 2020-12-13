@@ -1,0 +1,19 @@
+.tab {
+  display: flex;
+  &__item {
+    padding: 0 1.5rem;
+    color: $info;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-bottom: 1px solid $gray-100;
+    cursor: pointer;
+  }
+  &__item--mark {
+    font-size: 0.75rem;
+    vertical-align:text-top
+  }
+  &__item.active {
+    color: $primary;
+    border-bottom: 1px solid $primary;
+  }
+}

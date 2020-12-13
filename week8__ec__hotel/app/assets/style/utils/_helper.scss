@@ -1,0 +1,45 @@
+// icon
+.iconAlertInfo {
+  &__text {
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    background-color: $primary;
+    color: $white;
+    border-radius: 50%;
+    font-size: $fsz * 0.5;
+    padding: 0 4px;
+  }
+}
+
+
+.page-padding-1 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  // @include media-breakpoint-up(md) {
+  //   padding-top: 80px;
+  //   padding-bottom: 60px;
+  // }
+}
+
+.ab-md-right {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    right: 0;
+  }
+}
+
+//
+.img-objcc {
+  object-fit: cover;
+  object-fit: center;
+}
+
+//
+.radial-gradient {
+  background-image: radial-gradient(rgba($black, 0.2), $black);
+}
+
+.pointer {
+  cursor: pointer;
+}

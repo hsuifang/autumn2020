@@ -1,0 +1,118 @@
+// Typography
+//
+$font-family-base:            'Roboto', sans-serif, "微軟正黑體";
+
+// font-size
+//
+$fsz: 1rem;
+$fontSizes: (
+  1: $fsz * 0.75, // 12
+  2: $fsz * 0.875, // 14
+  3: $fsz, // 16,
+  4: $fsz * 1.25, // 20
+  5: $fsz * 1.5, // 24
+);
+
+// // Color system
+$white:    #fff !default;
+$gray-100: #F1F0F8;
+$gray-200: #FFFFFF98;
+$gray-300: #F1F0F800;
+$gray-400: #FFFFFF00;
+$gray-500: #00000060;
+$gray-600: #00000061;
+$gray-700: #121212;
+$gray-800: #00000099;
+$gray-900: #000000DE;
+$black:    #000 !default;
+
+$primary:     #6C51E2;
+$secondary:   $gray-200;
+$success:     #28a745;
+$info:        $gray-800;
+$warning:     #ffc107;
+$danger:      #dc3545;
+$light:       $gray-100;
+$dark:        #000;
+
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "white":      $white,
+    "gray-100":   $gray-100,
+    "gray-200":   $gray-200,
+    "gray-300":   $gray-300,
+    "gray-400":   $gray-400,
+    "gray-500":   $gray-500,
+    "gray-600":   $gray-600,
+    "gray-700":   $gray-700,
+    "gray-800":   $gray-800,
+    "gray-900":   $gray-900,
+  ),
+  $theme-colors
+);
+
+$border-color:                $gray-200 ;
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:                              $gray-800;
+
+// Spacing
+//
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .5),   // 8
+    2: ($spacer * 1),    // 16
+    3: ($spacer * 1.25), // 20
+    4: ($spacer * 1.5),  // 24
+    5: ($spacer * 2),    // 32
+  ),
+  $spacers
+);
+
+
+// Navs
+
+$nav-link-padding-y:                0;
+$nav-link-padding-x:                0;
+
+// Navbar
+
+$navbar-padding-y:                  1.25rem;
+$navbar-padding-x:                  0;
+
+$navbar-nav-link-padding-x:         1.25rem;
+
+
+// Grid breakpoints
+//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+//
+$h1-font-size:                1rem * 3;
+$headings-font-weight:        600;
+
+// form elements
+$input-padding-y: 1rem;
+$input-padding-x: 1.25rem;

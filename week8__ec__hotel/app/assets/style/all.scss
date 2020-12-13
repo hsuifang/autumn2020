@@ -1,0 +1,18 @@
+@import './utils/variables';
+
+@import './vendor/boostrap';
+
+
+@import "./base/base";
+@import "./utils/helper";
+@import "./utils/mixins";
+@import "./utils/fontSize";
+
+@import "./components/squareImage";
+@import "./components/pagination";
+@import "./components/tab";
+@import "./components/card";
+@import "./components/panel";
+
+
+@import "./pages/pages";
