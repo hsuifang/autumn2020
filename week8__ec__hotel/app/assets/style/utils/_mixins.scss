@@ -1,0 +1,14 @@
+@mixin textReplaceImg {
+  text-indent: 101%; // 強迫文字縮排至原本的區域外
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin backgroundImg ($size: cover) {
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+// breakPoints
