@@ -3,7 +3,6 @@ const $ = require('gulp-load-plugins')({ lazy: false });
 const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
-const moment = require('moment');
 const { envOptions } = require('./envOptions');
 
 let options = minimist(process.argv.slice(2), envOptions);
@@ -45,7 +44,7 @@ function sass() {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       outputStyle: 'compressed', // 執行壓縮
-      includePaths: ['node_modules/bootstrap/scss/'], // 導入 sass 模塊可能路徑
+      includePaths: envOptions.style.includePaths, // 導入 sass 模塊可能路徑
     }).on('error', $.sass.logError))
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))

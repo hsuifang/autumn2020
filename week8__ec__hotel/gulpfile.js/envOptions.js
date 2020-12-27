@@ -32,6 +32,10 @@ let envOptions = {
       `${srcPath}/assets/style/**/*.scss`,
       `${srcPath}/assets/style/**/*.sass`,
     ],
+    includePaths: [
+      `${nodePath}/bootstrap/scss`,
+      `${nodePath}/daterangepicker/`,
+    ],
     path: `${distPath}/assets/style`,
   },
   javascript: {
@@ -44,6 +48,9 @@ let envOptions = {
   vendors: {
     src: [
       `${nodePath}/jquery/dist/**/jquery.min.js`,
+      `${nodePath}/bootstrap/dist/js/**/bootstrap.bundle.min.js`,
+      `${nodePath}/daterangepicker/moment.min.js`,
+      `${nodePath}/daterangepicker/daterangepicker.js`
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,
