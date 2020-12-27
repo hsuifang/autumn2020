@@ -1,0 +1,397 @@
+---
+title: ALOHA
+layout: ./app/layout/searchBar.ejs
+engine: ejs
+page: detail
+---
+<!-- breadcrumb -->
+<section class="bg-gray-100 mb-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- filter Result - computer -->
+        <form class="d-none d-md-flex pt-md-4 pb-md-4">
+          <!-- 選擇目的 -->
+          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+            <button id="btnDestination" type="button" class="btn d-flex align-items-center dropdown-toggle text-gray-800"
+              data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+              <span class="material-icons mr-2 text-dark">
+                location_on
+              </span>
+              <div data-name="selectHotel-location" class="text-left">
+                <p class="text-dark fsz-md-1">DESTINATION</p>
+                <p class="text-gray-800 fsz-md-1">Bangkok, Thailand</p>
+              </div>
+            </button>
+            <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-gray-800">Thailand</p>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-gray-800">Thailand</p>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-gray-800">Thailand</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- 選擇時間 -->
+          <div class="form-control p-0 btn-group mr-2 border-white">
+            <button id="js-datepicker" type="button" class="btn d-flex align-items-center text-left">
+              <span class="material-icons mr-2">
+                date_range
+              </span>
+              <div id="js-datepicker-content">
+                <p class="fsz-2">Check-in / Check-out</p>
+                <p class="fsz-1 text-gray-800">17 June - 19 June</p>
+              </div>
+            </button>
+          </div>
+          <!-- 選擇人數 -->
+          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+            <button id="btnGuest" type="button" class="btn d-flex align-items-center dropdown-toggle text-gray-800" data-toggle="dropdown"
+              aria-haspopup="false" aria-expanded="false">
+              <span class="material-icons mr-2 text-dark">
+                person
+              </span>
+              <div data-name="selectHotel-guest" class="text-left">
+                <p class="text-dark fsz-md-1">GUESTS</p>
+                <p class="text-gray-800 fsz-md-1">2 adults・1 room</p>
+              </div>
+            </button>
+            <ul class="dropdown-menu py-2 bg-white w-100" aria-labelledby="btnGuest">
+              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+                <p>Adult</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                  <span>2</span>
+                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+                </p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+                <p>Kid</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                  <span>2</span>
+                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+                </p>
+              </li>
+              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+                <p>room</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                  <span>2</span>
+                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- 搜尋 -->
+          <a href="searchResult.html" class="btn btn-primary py-3 px-5" type="button">SEARCH</a>
+        </form>
+        <!-- filter Result - below size of pad -->
+        <a href="searchResult.html" class="d-flex d-md-none align-items-center text-info pb-4 pt-4 fsz-1">
+          <span class="material-icons mr-3 text-dark">arrow_back</span>
+          Bangkok・17 June - 19 June・2 adults・1 room
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- gallery / banner -->
+<section class="mb-3 mb-lg-5">
+  <!-- banner / carousel -->
+  <div class="d-md-none detail-banner">
+    <div id="carouselIndicators" class="w-100 carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/images/Rachada1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/Rachada2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/Rachada3.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/images/Rachada4.jpg" alt="forth slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container d-none d-md-block">
+    <div class="detail-gallery">
+      <img class="detail-gallery__item1" src="assets/images/Rachada1.jpg" alt="">
+      <img class="detail-gallery__item2" src="assets/images/Rachada2.jpg" alt="">
+      <img class="detail-gallery__item3" src="assets/images/Rachada3.jpg" alt="">
+      <img class="detail-gallery__item4" src="assets/images/Rachada4.jpg" alt="">
+      <button class="detail-gallery__item5 btn btn-dark">See All 10 photos</button>
+    </div>
+  </div>
+</section>
+<!-- room discription -->
+<section class="container">
+  <div class="row">
+    <div class="col-12 col-md-7 mb-8 mb-md-0">
+      <div class="d-block d-md-flex align-items-md-center">
+        <h4 class="mb-2 mb-md-0 mr-md-3">Rachada Hotel</h4>
+        <div class="d-flex align-items-center mb-2 mb-md-0">
+          <span class="iconSize-3 material-icons">star_rate</span>
+          <span class="iconSize-3 material-icons">star_rate</span>
+          <span class="iconSize-3 material-icons">star_rate</span>
+          <span class="iconSize-3 material-icons">star_rate</span>
+          <span class="fsz-2 text-gray-600">4.0 (283)</span>
+        </div>
+      </div>
+      <p class="text-primary fsz-1 fsz-2 mb-3 mb-md-5">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
+      <p class="text-gray-800 fsz-2">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen Television, and en-suite bathrooms.</p>
+    </div>
+  </div>
+</section>
+<!-- Filter / Select your room -->
+<section class="container mb-md-6">
+  <h5 class="mb-3 mb-md-5">Select your room</h5>
+  <div class="d-none d-md-flex">
+    <ul class="tagGroup mr-md-5">
+      <li class="tag tag--square">Bangkok, Thailand</li>
+      <li class="tag tag--square">17 June - 19 June・2 nights</li>
+      <li class="tag tag--square">2 adults・1 room</li>
+    </ul>
+    <a href="#" class="text-primary">EDIT DETAIL</a>
+  </div>
+</section>
+<!-- Results / Select your room -->
+<section class="container">
+  <!-- roomGroup-header -->
+  <ul class="d-none d-md-flex row no-gutters pb-md-2 mb-1">
+    <li class="col-md-6 font-weight-bold">ROOM TYPE</li>
+    <li class="col-md-2 font-weight-bold text-center">SLEEPS</li>
+    <li class="col-md-2 font-weight-bold text-center">PRICE</li>
+    <li class="col-md-2 font-weight-bold text-center">ROOMS</li>
+  </ul>
+  <!-- roomGroup-List -->
+  <ul>
+    <li class="detail-roomList row no-gutters">
+      <!-- 房間圖片與資訊  -->
+      <div class="col-12 col-md-6 row no-gutters">
+        <div class="col-6 detail-roomList__img">
+          <div class="imgRatio-4 imgRatio-lg-1"><img class="" src="assets/images/roomA.jpg" alt=""></div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center pl-2">
+          <p class="font-weight-bold mb-1">Deluxe Double Room A</h6>
+          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <!-- room-provide -->
+          <ul class="d-flex flex-wrap">
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">wifi</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Wi-Fi</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">room_service</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Room service</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">restaurant</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Breakfast</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">smoking_rooms</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Smoke free</span>
+            </li>
+            <li class="w-lg-100 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">tv</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Television</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons">ac_unit</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Air conditioner</span>
+            </li>
+          </ul>
+          <!-- person -->
+          <div class="d-flex d-md-none">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+          </div>
+        </div>
+      </div>
+      <!-- 房型 -->
+      <div class="col-md-2 d-none d-md-flex fx-cc">
+        <span class="material-icons">person</span>
+        <span class="material-icons">person</span>
+      </div>
+      <div class="col-12 col-md-4 detail-roomList__subarea">
+        <!-- 房間價格 -->
+        <div class="w-50 d-flex justify-content-end fx-md-cc order-last">
+          <div class="detail-roomList__price">
+            <p class="text-info fsz-2"><del>TWD 1,600</del></p>
+            <p class="font-weight-bold">TWD <span class="text-primary">1,490</span></p>
+            <p class="text-info d-none d-md-block">per night</p>
+          </div>
+        </div>
+        <!-- 預定數量 + / - -->
+        <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
+          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <p class="pl-md-4 pr-md-4">0</p>
+          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+        </div>
+      </div>
+    </li>
+    <li class="detail-roomList row no-gutters">
+      <!-- 房間圖片與資訊  -->
+      <div class="col-12 col-md-6 row no-gutters">
+        <div class="col-6 detail-roomList__img">
+          <!-- <img class="" src="assets/images/roomB.jpg" alt=""> -->
+          <div class="imgRatio-4 imgRatio-lg-1 imgRatio-lg-1"><img class="" src="assets/images/roomB.jpg" alt=""></div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center pl-2">
+          <p class="font-weight-bold mb-1">Deluxe Double Room B</h6>
+          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <!-- room-provide -->
+          <ul class="d-flex flex-wrap">
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">wifi</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Wi-Fi</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">room_service</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Room service</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">restaurant</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Breakfast</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">smoking_rooms</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Smoke free</span>
+            </li>
+            <li class="w-lg-100 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">tv</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Television</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons">ac_unit</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Air conditioner</span>
+            </li>
+          </ul>
+          <!-- person -->
+          <div class="d-flex d-md-none">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+          </div>
+        </div>
+      </div>
+      <!-- 房型 -->
+      <div class="col-md-2 d-none d-md-flex fx-cc">
+        <span class="material-icons">person</span>
+        <span class="material-icons">person</span>
+      </div>
+      <div class="col-12 col-md-4 detail-roomList__subarea">
+        <!-- 房間價格 -->
+        <div class="w-50 d-flex justify-content-end fx-md-cc order-last">
+          <div class="detail-roomList__price">
+            <p class="font-weight-bold">TWD 1,490</p>
+            <p class="text-info d-none d-md-block">per night</p>
+          </div>
+        </div>
+        <!-- 預定數量 + / - -->
+        <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
+          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <p class="pl-md-4 pr-md-4">0</p>
+          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+        </div>
+      </div>
+    </li>
+    <li class="detail-roomList row no-gutters">
+      <!-- 房間圖片與資訊  -->
+      <div class="col-12 col-md-6 row no-gutters">
+        <div class="col-6 detail-roomList__img">
+          <div class="imgRatio-4 imgRatio-lg-1"><img src="assets/images/Rachada1.jpg" alt=""></div>
+        </div>
+        <div class="col-6 d-flex flex-column justify-content-center pl-2">
+          <p class="font-weight-bold mb-1">Deluxe Suite with Pool</h6>
+          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <!-- room-provide -->
+          <ul class="d-flex flex-wrap">
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">wifi</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Wi-Fi</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">kitchen</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Refrigerator</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">restaurant</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Breakfast</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">room_service</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Room service</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">tv</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Television</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">local_bar</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Mini Bar</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons">ac_unit</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Air conditioner</span>
+            </li>
+            <li class="w-lg-50 d-flex mb-0 mb-lg-2">
+              <span class="iconSize-3 iconSize-md-4 text-info material-icons mr-1">smoking_rooms</span>
+              <span class="fsz-2 text-info d-none d-lg-inline">Smoke free</span>
+            </li>
+          </ul>
+          <!-- person -->
+          <div class="d-flex d-md-none">
+            <span class="material-icons">person</span>
+            <span class="material-icons">person</span>
+          </div>
+        </div>
+      </div>
+      <!-- 房型 -->
+      <div class="col-md-2 d-none d-md-flex fx-cc">
+        <span class="material-icons">person</span>
+        <span class="material-icons">person</span>
+      </div>
+      <div class="col-12 col-md-4 detail-roomList__subarea">
+        <!-- 房間價格 -->
+        <div class="w-50 d-flex justify-content-end fx-md-cc order-last">
+          <div class="detail-roomList__price">
+            <p class="font-weight-bold">TWD 1,490</p>
+            <p class="text-info d-none d-md-block">per night</p>
+          </div>
+        </div>
+        <!-- 預定數量 + / - -->
+        <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
+          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <p class="pl-md-4 pr-md-4">0</p>
+          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

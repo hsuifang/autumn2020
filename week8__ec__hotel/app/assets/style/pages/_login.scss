@@ -1,0 +1,29 @@
+// login
+.login {
+  &__content {
+    padding-top: 24px;
+    @include media-breakpoint-up(md) {
+      padding-top: 104px;
+    }
+  }
+  &__coverImg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    background-image: url('../images/login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.nav-profileImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}

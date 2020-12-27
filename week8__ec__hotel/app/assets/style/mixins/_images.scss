@@ -1,0 +1,5 @@
+@mixin backgroundImg ($size: cover) {
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

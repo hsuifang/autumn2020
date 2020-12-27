@@ -1,0 +1,141 @@
+---
+title: ALOHA
+layout: ./app/layout/layout.ejs
+engine: ejs
+page: bookingInfo
+---
+<section class="container pt-4  mb-8">
+  <div class="row">
+    <!-- booking -->
+    <div class="col-12 col-lg-8 order-2 order-lg-1 pt-3 pt-lg-0">
+      <h4 class="mb-5 mb-md-4">My Bookings</h4>
+      <ul class="tabList">
+        <li class="tabList__item"><a href="#" class="tabList__link active">Upcoming</a></li>
+        <li class="tabList__item"><a href="#" class="tabList__link">Completed</a></li>
+      </ul>
+      <!-- bookingInfo - List -->
+      <ul>
+        <li class="bookingInfo-list row no-gutters">
+          <div class="col-md-4">
+            <a class="d-block imgRatio-1 imgRatio-md-2">
+              <img class="bookingInfo-list__img" src="assets/images/Rachada1.jpg" alt="room">
+            </a>
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+              <ul class="mb-5 mb-md-0">
+                <li class="d-flex mb-2">
+                  <span class="material-icons">hotel</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">Rachada Hotel</p>
+                    <p class="fsz-2 text-info">Standard Double Room</p>
+                  </div>
+                </li>
+                <li class="d-flex mb-2">
+                  <span class="material-icons">date_range</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
+                    <p class="fsz-2 text-info">2 nights・2 adults</p>
+                  </div>
+                </li>
+                <li class="d-flex">
+                  <span class="material-icons">attach_money</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">TWD 4,633</p>
+                    <p class="fsz-2 text-info">includes taxes and charges</p>
+                  </div>
+                </li>
+              </ul>
+              <a href="detail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+            </div>
+          </div>
+        </li>
+        <li class="bookingInfo-list row no-gutters">
+          <div class="col-md-4">
+            <a class="d-block imgRatio-1 imgRatio-md-2">
+              <img class="bookingInfo-list__img" src="assets/images/Chatuchack1.jpg" alt="room">
+            </a>
+          </div>
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+              <ul class="mb-5 mb-md-0">
+                <li class="d-flex mb-2">
+                  <span class="material-icons">hotel</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">WOW Life Hotel</p>
+                    <p class="fsz-2 text-info">Standard Double Room</p>
+                  </div>
+                </li>
+                <li class="d-flex mb-2">
+                  <span class="material-icons">date_range</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">8 Sep 2020 - 15 Sep 2020</p>
+                    <p class="fsz-2 text-info">7 nights・2 adults</p>
+                  </div>
+                </li>
+                <li class="d-flex">
+                  <span class="material-icons">attach_money</span>
+                  <div class="pl-3">
+                    <p class="font-weight-bold">TWD 13,084</p>
+                    <p class="fsz-2 text-info">includes taxes and charges</p>
+                  </div>
+                </li>
+              </ul>
+              <a href="detail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Profile -->
+    <div class="col-12 col-lg-4 order-1 order-lg-2 mb-6 mb-lg-0">
+      <!-- Profile / title -->
+      <div class="d-flex justify-content-between align-items-center mb-3 mb-md-5">
+        <div class="d-flex align-items-center">
+          <h4 class="mr-2">Profile</h4>
+          <p class="tag tag--rounded bg-primary d-flex fx-cc fsz-1 text-white">
+            <span class="material-icons iconSize-2">check</span>
+            VERIFIED
+          </p>
+        </div>
+        <a href="#" class="text-primary font-weight-bold fsz-2">EDIT</a>
+      </div>
+      <!-- Profile / info -->
+      <div class="p-5 bg-gray-100 rounded">
+        <ul class="d-block d-md-flex d-lg-block">
+          <li class="w-100 mb-lg-5 d-flex flex-wrap justify-content-between justify-content-md-left justify-content-lg-between">
+            <div class="w-50">
+              <p class="font-weight-bold mb-5">User details</p>
+              <div class="d-flex">
+                <img class="d-none d-md-block d-lg-none bookingInfo-profileImg bookingInfo-profileImg-md mr-md-3" src="assets/images/profile.jpg" alt="bookingInfo-profileImg">
+                <ul>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">David Lin</li>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">david0520@mail.com.tw</li>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">+886 9 32 456 789</li>
+                </ul>
+              </div>
+            </div>
+            <img class="d-md-none d-lg-block bookingInfo-profileImg bookingInfo-profileImg-md" src="assets/images/profile.jpg" alt="bookingInfo-profileImg">
+          </li>
+          <li class="w-100">
+            <p class="font-weight-bold mb-5">Payment methods</p>
+            <ul class="d-flex text-info">
+              <li class="w-50 p-3 bg-white rounded mr-2">
+                <p class="fsz-2">xxxx-xxxx-7890</p>
+                <p class="fsz-2">DAVID LIN</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fsz-2">08/2029</p>
+                  <span class="material-icons iconSize-3">credit_card</span>
+                </div>
+              </li>
+              <li class="w-50 p-3 bg-white rounded d-flex fx-cc">
+                <a href="#">
+                  <span class="material-icons iconSize-5 rounded-circle bg-primary text-white">add</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>

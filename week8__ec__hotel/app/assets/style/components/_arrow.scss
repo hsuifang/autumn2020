@@ -1,0 +1,21 @@
+.selectArrow {
+  background: $gray-100;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background: darken($gray-100, 4);
+  }
+  &--right::after {
+    content: ' > ';
+    font-weight: bolder;
+  }
+  &--left::after {
+    content: ' < ';
+    font-weight: bolder;
+  }
+}

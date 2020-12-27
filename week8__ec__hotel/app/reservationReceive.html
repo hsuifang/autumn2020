@@ -1,0 +1,46 @@
+---
+title: ALOHA
+layout: ./app/layout/reservation.ejs
+engine: ejs
+page: reservationReceive
+---
+<section class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <h2 class="pb-5 pb-md-6 border-bottom fsz-5 fsz-md-6">Reservation received!</h2>
+      <ul class="pt-5 mb-5">
+        <li class="d-flex mb-3">
+          <p class="w-25 font-weight-bold">Guest</p>
+          <p class="w-75">David Lin</p>
+        </li>
+        <li class="d-flex mb-3">
+          <p class="w-25 font-weight-bold">Email</p>
+          <div class="w-75 d-block d-md-flex align-items-center">
+            <p>david0520@mail.com.tw</p>
+            <a href="#" class="ml-md-3 text-primary fsz-1">Confirmation email sent to this address</a>
+          </div>
+        </li>
+        <li class="d-flex pb-5 border-bottom">
+          <p class="w-25 font-weight-bold">Phone</p>
+          <p class="w-75">+886 9 32 456 789</p>
+        </li>
+        <li class="d-flex pt-5 pb-5 border-bottom">
+          <p class="w-25 font-weight-bold">Room</p>
+          <p class="w-75">Deluxe Suite with Pool / 2 nights</p>
+        </li>
+        <li class="d-flex pt-5 mb-3">
+          <p class="w-25 font-weight-bold">Check-in</p>
+          <p class="w-75">Wednesday, 17 June 2020</p>
+        </li>
+        <li class="d-flex pb-5 border-bottom">
+          <p class="w-25 font-weight-bold">Check-out</p>
+          <p class="w-75">Friday, 19 June 2020</p>
+        </li>
+      </ul>
+      <div class="d-block d-md-flex justify-content-md-end">
+        <a href="reservationDetail.html" class="w-100 w-md-auto btn btn-outline-primary btn-lg mr-md-2 mb-2 mb-md-0">EDIT RESERVATION</a>
+        <a href="index.html" type="button" class="w-100 w-md-auto btn btn-primary btn-lg">HOMEPAGE</a>
+      </div>
+    </div>
+  </div>
+</section>

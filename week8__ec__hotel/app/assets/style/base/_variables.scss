@@ -1,7 +1,10 @@
+// Customize
+//
+
 // Typography
 //
-$font-family-base:            'Roboto', sans-serif, "微軟正黑體";
-
+$font-family-base: 'Open Sans', 'Roboto', sans-serif, "微軟正黑體";
+$headings-margin-bottom: 0;
 // font-size
 //
 $fsz: 1rem;
@@ -11,18 +14,28 @@ $fontSizes: (
   3: $fsz, // 16,
   4: $fsz * 1.25, // 20
   5: $fsz * 1.5, // 24
+  6: $fsz * 2, // 36
+);
+
+
+// Images - ratio
+$imgRatios:(
+  1: 70%,
+  2: 80%,
+  3: 90%,
+  4: 100%
 );
 
 // // Color system
 $white:    #fff !default;
 $gray-100: #F1F0F8;
 $gray-200: #FFFFFF98;
-$gray-300: #F1F0F800;
+$gray-300: #F1F0F8;
 $gray-400: #FFFFFF00;
 $gray-500: #00000060;
 $gray-600: #00000061;
 $gray-700: #121212;
-$gray-800: #00000099;
+$gray-800: #07060699;
 $gray-900: #000000DE;
 $black:    #000 !default;
 
@@ -61,8 +74,8 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$border-color:                $gray-200 ;
-
+$border-color:                $gray-300;
+$input-border-color:          $white;
 
 // Links
 //
@@ -76,38 +89,32 @@ $spacers: () !default;
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .5),   // 8
-    2: ($spacer * 1),    // 16
-    3: ($spacer * 1.25), // 20
-    4: ($spacer * 1.5),  // 24
-    5: ($spacer * 2),    // 32
+    1: ($spacer * .25),   // 4
+    2: ($spacer * .5),   // 8
+    3: ($spacer * 1),    // 16
+    4: ($spacer * 1.25), // 20
+    5: ($spacer * 1.5),  // 24
+    6: ($spacer * 2),    // 32
+    7: ($spacer * 2.25), // 36px
+    8: ($spacer * 3), // 48px
+    9: ($spacer * 4), // 64px
+    10: ($spacer * 4.5), // 72px
   ),
   $spacers
 );
 
 
 // Navs
-
 $nav-link-padding-y:                0;
 $nav-link-padding-x:                0;
 
 // Navbar
-
-$navbar-padding-y:                  1.25rem;
+$navbar-padding-y:                  1rem;
 $navbar-padding-x:                  0;
-
 $navbar-nav-link-padding-x:         1.25rem;
-
-
-// Grid breakpoints
-//
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
+$navbar-light-color:                $gray-700;
+$navbar-light-toggler-border-color: transparent;
+$navbar-toggler-padding-x:          0;
 
 //
 $h1-font-size:                1rem * 3;
@@ -116,3 +123,16 @@ $headings-font-weight:        600;
 // form elements
 $input-padding-y: 1rem;
 $input-padding-x: 1.25rem;
+$label-margin-bottom: 0.25rem;
+
+// checkbox
+//
+$custom-checkbox-indicator-border-radius:       0.25rem;
+
+
+// modal
+//
+$modal-dialog-margin: 0;
+$modal-content-border-radius: 0;
+$modal-content-border-width: 0;
+$modal-inner-padding: 0;

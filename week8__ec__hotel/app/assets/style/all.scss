@@ -1,18 +1,36 @@
-@import './utils/variables';
+@import 'functions';
+@import './base/variables';
 
+// vendors
 @import './vendor/boostrap';
-
-
+@import 'daterangepicker';
+// base
 @import "./base/base";
-@import "./utils/helper";
-@import "./utils/mixins";
-@import "./utils/fontSize";
 
-@import "./components/squareImage";
+// mixins
+@import "./mixins/images";
+@import "./mixins/text";
+
+// utils
+@import "./utils/helper";
+@import "./utils/sizing";
+@import "./utils/border";
+@import "./utils/fontSize";
+@import "./utils/imageRatio";
+
+// components
 @import "./components/pagination";
 @import "./components/tab";
+@import "./components/infoList";
 @import "./components/card";
-@import "./components/panel";
+@import "./components/arrow";
+@import "./components/tag";
 
-
+// pages
 @import "./pages/pages";
+@import "./pages/home";
+@import "./pages/searchResult";
+@import "./pages/detail";
+@import "./pages/reservationDetail";
+@import "./pages/login";
+@import "./pages/bookingInfo";

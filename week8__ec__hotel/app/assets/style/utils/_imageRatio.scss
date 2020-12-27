@@ -1,0 +1,25 @@
+// 1 : 0.75
+
+
+@each $breakpoints in map-keys($grid-breakpoints) {
+  @each $key, $val in $imgRatios {
+    $mediaBk: $breakpoints;
+    @if($key == 'xs') {
+      $mediaBk: ''
+    }
+    @include media-breakpoint-up($mediaBk) {
+      $infix: breakpoint-infix($mediaBk, $grid-breakpoints);
+      .imgRatio#{$infix}-#{$key} {
+        height: 0;
+        padding-bottom: $val !important;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}

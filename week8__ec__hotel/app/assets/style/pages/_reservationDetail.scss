@@ -1,0 +1,15 @@
+.reservationDetail{
+  &-collapse {
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    top: 50px;
+    z-index: 1;
+    left: 0;
+    &__content {
+      border-top: 1px solid $white;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+---
+title: ALOHA
+layout: ./app/layout/reservation.ejs
+engine: ejs
+page: reservationDetail
+---
+<section class="container pt-md-5 pb-8">
+  <!-- reservation Detail -->
+  <div class="row justify-content-center">
+    <div class="col-12 bg-gray-100 pt-2 pb-2 d-flex fx-btc d-md-none mb-4">
+      <p class="fsz-2 font-weight-bold js-detailPrize"><span class="mr-2 font-weight-normal text-info">Total</span>TWD 4,633</p>
+      <button class="btn d-flex fx-cc text-primary reservationDetail-collapse__toggle" data-toggle="collapse" data-target="#collapseRoomDetail">
+        <p class="fsz-2 font-weight-bold">DETAILS</p>
+        <span class="material-icons">keyboard_arrow_down</span>
+      </button>
+      <div class="reservationDetail-collapse collapse bg-gray-100" id="collapseRoomDetail">
+        <p class="reservationDetail-collapse__content">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </p>
+      </div>
+    </div>
+    <form class="col-12 col-md-6 col-lg-5">
+      <h2 class="mb-4">Reservation details</h2>
+      <ul>
+        <li class="form-group">
+          <label class="text-info mb-1" for="name">Name</label>
+          <input type="text" class="form-control border-gray-500" id="name" aria-describedby="name">
+        </li>
+        <li class="form-group">
+          <label class="text-info mb-1" for="email">Email</label>
+          <input type="email" class="form-control border-gray-500" id="email" aria-describedby="email">
+        </li>
+        <li class="form-group">
+          <label class="text-info mb-1" for="phone">Phone (optional)</label>
+          <input type="tel" class="form-control border-gray-500" id="phone" aria-describedby="phone">
+        </li>
+      </ul>
+      <a href="reservationReceive.html" type="button" class="d-block btn btn-lg btn-primary w-100">RESERVE</a>
+      <a href="#" class="d-block text-center text-primary">Reserve now, pay at stay</a>
+    </form>
+    <ul class="d-none d-md-block col-md-6 col-lg-5 bg-gray-100 rounded p-md-5">
+      <li class="pb-md-5 border-bottom border-white">
+        <h6 class="mb-md-3">Booking details</h6>
+        <ul class="fsz-md-2 text-info">
+          <li class="mb-md-2">17 June 2020 - 19 June 2020・2 nights</li>
+          <li class="mb-md-2">2 adults・1 room</li>
+          <li class="mb-md-2">Rachada Hotel</li>
+        </ul>
+      </li>
+      <li class="pt-md-5 pb-md-5 border-bottom border-white">
+        <h6 class="mb-md-3">Price summary</h6>
+        <ul class="fsz-md-2 text-info">
+          <li class="d-flex justify-content-between align-items-center mb-md-2">
+            <p>Deluxe Suite with Pool</p>
+            <p>TWD 3,960</p>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-md-2">
+            <p>VAT (7%)</p>
+            <p>TWD 277</p>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-md-2">
+            <p>Property service charge</p>
+            <p>TWD 396</p>
+          </li>
+        </ul>
+      </li>
+      <li class="pt-md-5 d-flex justify-content-between align-items-center">
+        <p class="text-info">Total</p>
+        <h6>TWD 4,633</h6>
+      </li>
+    </ul>
+  </div>
+</section>

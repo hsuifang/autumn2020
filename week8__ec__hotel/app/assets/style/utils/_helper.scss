@@ -1,27 +1,21 @@
-// icon
-.iconAlertInfo {
-  &__text {
-    position: absolute;
-    top: -10%;
-    left: 80%;
-    background-color: $primary;
-    color: $white;
-    border-radius: 50%;
-    font-size: $fsz * 0.5;
-    padding: 0 4px;
+@each $breakpoints in map-keys($grid-breakpoints) {
+  $mediaBk: $breakpoints;
+  @include media-breakpoint-up($mediaBk) {
+    $infix: breakpoint-infix($mediaBk, $grid-breakpoints);
+    .fx#{$infix}-cc {
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .fx#{$infix}-btc {
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
   }
 }
 
-
-.page-padding-1 {
-  padding-top: 36px;
-  padding-bottom: 36px;
-  // @include media-breakpoint-up(md) {
-  //   padding-top: 80px;
-  //   padding-bottom: 60px;
-  // }
+.font-top {
+  vertical-align: top;
 }
-
 .ab-md-right {
   @include media-breakpoint-up(md) {
     position: absolute;
@@ -29,17 +23,23 @@
   }
 }
 
-//
-.img-objcc {
-  object-fit: cover;
-  object-fit: center;
+.overflow-scoll{
+  flex-wrap: nowrap !important;
+  overflow: scroll !important;
 }
 
-//
+
 .radial-gradient {
-  background-image: radial-gradient(rgba($black, 0.2), $black);
+  background-image: radial-gradient(rgba($black, 0.1), rgba($black, 0.8));
 }
 
 .pointer {
   cursor: pointer;
+}
+
+// add based on boostrap
+.dropnone .dropdown-toggle {
+  &::after {
+    display: none;
+  }
 }

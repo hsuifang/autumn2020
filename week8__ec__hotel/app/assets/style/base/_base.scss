@@ -1,17 +1,22 @@
-// base
 *, *:after, *:before {
   position: relative;
   box-sizing: border-box;
   transition: all 0.1s ease;
 }
-html {
-  font-family: 'Roboto', sans-serif, "微軟正黑體";
-  font-size: 16px;
-  width: 100%;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
 }
 
-a, p {
-  font-size: 16px;
+a,
+p,
+legend {
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -22,7 +27,9 @@ a {
     text-decoration: none;
   }
 }
-ul, li {
+
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -34,9 +41,7 @@ img{
   height: auto;
 }
 
-.fas, .material-icons  {
+.material-icons {
+  vertical-align: bottom;
   cursor: pointer;
-  &:hover{
-    opacity: 0.9;
-  }
 }
