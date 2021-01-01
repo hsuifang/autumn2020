@@ -13,33 +13,32 @@
   }
 }
 
-.font-top {
-  vertical-align: top;
-}
-.ab-md-right {
-  @include media-breakpoint-up(md) {
-    position: absolute;
-    right: 0;
-  }
-}
-
 .overflow-scoll{
   flex-wrap: nowrap !important;
   overflow: scroll !important;
 }
 
-
 .radial-gradient {
   background-image: radial-gradient(rgba($black, 0.1), rgba($black, 0.8));
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 // add based on boostrap
 .dropnone .dropdown-toggle {
   &::after {
     display: none;
+  }
+}
+
+.pointer { 
+  cursor: pointer;
+}
+
+.fixed-md-bottom { 
+  @include media-breakpoint-up(md) {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
   }
 }

@@ -68,9 +68,10 @@
       }
     }
     &__subarea {
-      padding: 0.5rem;
+      padding: 1rem 0.5rem;
       display: flex;
-      background-color: $gray-100;
+      background-color: $secondary;
+      border-radius: 0 0 0.5rem 0.5rem;
       @include media-breakpoint-up(md) {
         background-color: transparent;
       }
@@ -82,6 +83,18 @@
         text-align: center;
         padding-right: 0;
       }
+    }
+  }
+  &-modal {
+    .modal-content {
+      background: transparent;
+    }
+    .modal-dialog {
+      margin: 0 auto;
+      position: fixed;
+      bottom: 0;
+      max-width: 100%;
+      width: 100%;
     }
   }
 }

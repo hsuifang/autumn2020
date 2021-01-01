@@ -5,102 +5,10 @@ engine: ejs
 page: detail
 ---
 <!-- breadcrumb -->
-<section class="bg-gray-100 mb-md-5">
+<section class="bg-secondary mb-md-5">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <!-- filter Result - computer -->
-        <form class="d-none d-md-flex pt-md-4 pb-md-4">
-          <!-- 選擇目的 -->
-          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
-            <button id="btnDestination" type="button" class="btn d-flex align-items-center dropdown-toggle text-gray-800"
-              data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-              <span class="material-icons mr-2 text-dark">
-                location_on
-              </span>
-              <div data-name="selectHotel-location" class="text-left">
-                <p class="text-dark fsz-md-1">DESTINATION</p>
-                <p class="text-gray-800 fsz-md-1">Bangkok, Thailand</p>
-              </div>
-            </button>
-            <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
-              <a class="dropdown-item d-flex" href="#">
-                <span class="material-icons iconSize-5 mr-1">star</span>
-                <div>
-                  <p class="fsz-2">Bangkok</p>
-                  <p class="fsz-1 text-gray-800">Thailand</p>
-                </div>
-              </a>
-              <a class="dropdown-item d-flex" href="#">
-                <span class="material-icons iconSize-5 mr-1">star</span>
-                <div>
-                  <p class="fsz-2">Bangkok</p>
-                  <p class="fsz-1 text-gray-800">Thailand</p>
-                </div>
-              </a>
-              <a class="dropdown-item d-flex" href="#">
-                <span class="material-icons iconSize-5 mr-1">star</span>
-                <div>
-                  <p class="fsz-2">Bangkok</p>
-                  <p class="fsz-1 text-gray-800">Thailand</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- 選擇時間 -->
-          <div class="form-control p-0 btn-group mr-2 border-white">
-            <button id="js-datepicker" type="button" class="btn d-flex align-items-center text-left">
-              <span class="material-icons mr-2">
-                date_range
-              </span>
-              <div id="js-datepicker-content">
-                <p class="fsz-2">Check-in / Check-out</p>
-                <p class="fsz-1 text-gray-800">17 June - 19 June</p>
-              </div>
-            </button>
-          </div>
-          <!-- 選擇人數 -->
-          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
-            <button id="btnGuest" type="button" class="btn d-flex align-items-center dropdown-toggle text-gray-800" data-toggle="dropdown"
-              aria-haspopup="false" aria-expanded="false">
-              <span class="material-icons mr-2 text-dark">
-                person
-              </span>
-              <div data-name="selectHotel-guest" class="text-left">
-                <p class="text-dark fsz-md-1">GUESTS</p>
-                <p class="text-gray-800 fsz-md-1">2 adults・1 room</p>
-              </div>
-            </button>
-            <ul class="dropdown-menu py-2 bg-white w-100" aria-labelledby="btnGuest">
-              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-                <p>Adult</p>
-                <p class="d-flex justify-content-between align-items-center">
-                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                  <span>2</span>
-                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-                </p>
-              </li>
-              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-                <p>Kid</p>
-                <p class="d-flex justify-content-between align-items-center">
-                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                  <span>2</span>
-                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-                </p>
-              </li>
-              <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-                <p>room</p>
-                <p class="d-flex justify-content-between align-items-center">
-                  <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                  <span>2</span>
-                  <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <!-- 搜尋 -->
-          <a href="searchResult.html" class="btn btn-primary py-3 px-5" type="button">SEARCH</a>
-        </form>
         <!-- filter Result - below size of pad -->
         <a href="searchResult.html" class="d-flex d-md-none align-items-center text-info pb-4 pt-4 fsz-1">
           <span class="material-icons mr-3 text-dark">arrow_back</span>
@@ -152,32 +60,32 @@ page: detail
 <!-- room discription -->
 <section class="container">
   <div class="row">
-    <div class="col-12 col-md-7 mb-8 mb-md-0">
+    <div class="col-12 col-md-7 mb-8">
       <div class="d-block d-md-flex align-items-md-center">
-        <h4 class="mb-2 mb-md-0 mr-md-3">Rachada Hotel</h4>
+        <h2 class="mb-2 mb-md-0 mr-md-3">Rachada Hotel</h2>
         <div class="d-flex align-items-center mb-2 mb-md-0">
           <span class="iconSize-3 material-icons">star_rate</span>
           <span class="iconSize-3 material-icons">star_rate</span>
           <span class="iconSize-3 material-icons">star_rate</span>
           <span class="iconSize-3 material-icons">star_rate</span>
-          <span class="fsz-2 text-gray-600">4.0 (283)</span>
+          <span class="fsz-2 text-info">4.0 (283)</span>
         </div>
       </div>
       <p class="text-primary fsz-1 fsz-2 mb-3 mb-md-5">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</p>
-      <p class="text-gray-800 fsz-2">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen Television, and en-suite bathrooms.</p>
+      <p class="text-info fsz-2">The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen Television, and en-suite bathrooms.</p>
     </div>
   </div>
 </section>
 <!-- Filter / Select your room -->
 <section class="container mb-md-6">
-  <h5 class="mb-3 mb-md-5">Select your room</h5>
+  <h5 class="mb-3">Select your room</h5>
   <div class="d-none d-md-flex">
     <ul class="tagGroup mr-md-5">
       <li class="tag tag--square">Bangkok, Thailand</li>
       <li class="tag tag--square">17 June - 19 June・2 nights</li>
       <li class="tag tag--square">2 adults・1 room</li>
     </ul>
-    <a href="#" class="text-primary">EDIT DETAIL</a>
+    <a href="#" class="text-primary font-weight-bold">EDIT DETAIL</a>
   </div>
 </section>
 <!-- Results / Select your room -->
@@ -199,7 +107,7 @@ page: detail
         </div>
         <div class="col-6 d-flex flex-column justify-content-center pl-2">
           <p class="font-weight-bold mb-1">Deluxe Double Room A</h6>
-          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <p class="fsz-1 text-info mb-2 mb-md-2">1 bed (Queen size)</p>
           <!-- room-provide -->
           <ul class="d-flex flex-wrap">
             <li class="w-lg-50 d-flex mb-0 mb-lg-2">
@@ -250,9 +158,9 @@ page: detail
         </div>
         <!-- 預定數量 + / - -->
         <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
-          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button" class="pl-2 pl-md-0"><span class="iconSize-4 material-icons font-weight-bold">remove</span></a>
           <p class="pl-md-4 pr-md-4">0</p>
-          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button"><span class="iconSize-4 material-icons font-weight-bold">add</span></a>
         </div>
       </div>
     </li>
@@ -265,7 +173,7 @@ page: detail
         </div>
         <div class="col-6 d-flex flex-column justify-content-center pl-2">
           <p class="font-weight-bold mb-1">Deluxe Double Room B</h6>
-          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <p class="fsz-1 text-info mb-2 mb-md-2">1 bed (Queen size)</p>
           <!-- room-provide -->
           <ul class="d-flex flex-wrap">
             <li class="w-lg-50 d-flex mb-0 mb-lg-2">
@@ -315,9 +223,9 @@ page: detail
         </div>
         <!-- 預定數量 + / - -->
         <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
-          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button" class="pl-2 pl-md-0"><span class="iconSize-4 material-icons font-weight-bold">remove</span></a>
           <p class="pl-md-4 pr-md-4">0</p>
-          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button"><span class="iconSize-4 material-icons font-weight-bold">add</span></a>
         </div>
       </div>
     </li>
@@ -329,7 +237,7 @@ page: detail
         </div>
         <div class="col-6 d-flex flex-column justify-content-center pl-2">
           <p class="font-weight-bold mb-1">Deluxe Suite with Pool</h6>
-          <p class="fsz-1 text-gray-800 mb-2 mb-md-2">1 bed (Queen size)</p>
+          <p class="fsz-1 text-info mb-2 mb-md-2">1 bed (Queen size)</p>
           <!-- room-provide -->
           <ul class="d-flex flex-wrap">
             <li class="w-lg-50 d-flex mb-0 mb-lg-2">
@@ -387,11 +295,33 @@ page: detail
         </div>
         <!-- 預定數量 + / - -->
         <div class="w-50 d-flex align-items-center justify-content-between justify-content-md-center">
-          <a href="#" type="button" class="js-minus-roomCount pl-2 pl-md-0"><span class="iconSize-4 material-icons">remove</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button" class="pl-2 pl-md-0"><span class="font-weight-bold iconSize-4 material-icons">remove</span></a>
           <p class="pl-md-4 pr-md-4">0</p>
-          <a href="#" type="button" class="js-minus-roomCount"><span class="iconSize-4 material-icons">add</span></a>
+          <a href="#" data-toggle="modal" data-target="#searchDetailModal" type="button"><span class="font-weight-bold iconSize-4 material-icons">add</span></a>
         </div>
       </div>
     </li>
   </ul>
 </section>
+<!-- modal -->
+
+<div class="modal fade detail-modal" id="searchDetailModal" tabindex="-1" role="dialog" aria-labelledby="searchDetailModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="bg-dark rounded-top p-4">
+          <div class="container d-flex flex-column flex-md-row justify-content-end fx-md-btc">
+            <div class="mb-4 mb-md-0 align-self-end text-right text-md-left">
+              <p class="text-custom-gray-100 fsz-1">1 room ・2 night </p>
+              <p class="text-secondary fsz-4">Find 1,245 results</p>
+            </div>
+            <div class="d-flex">
+              <button type="button" class="btn btn-outline-white btn-lg w-50 mr-2 fsz-3" data-dismiss="modal" aria-label="Close">CLEAR</button>
+              <button onclick="location.href='reservationDetail.html'" type="button" class="btn btn-primary btn-lg w-50 fsz-3">RESERVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,6 +12,9 @@
       &.active {
         border-bottom: 2px solid $primary;
       }
+      &:hover{
+        border-bottom: 2px solid rgba($primary, 0.8);
+      }
     }
   }
   &__item {
@@ -19,14 +22,16 @@
   }
   &__link {
     display: block;
-    padding-right: 1.5rem;
     font-weight: bold;
+    color: $custom-gray-500;
     &:hover{
       color: rgba($primary, 0.8);
-      border-color: rgba($primary, 0.8);
     }
     &.active {
       color: $primary;
     }
+  }
+  &__link--light {
+    color: $custom-gray-400;
   }
 }

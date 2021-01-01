@@ -35,6 +35,7 @@ let envOptions = {
     includePaths: [
       `${nodePath}/bootstrap/scss`,
       `${nodePath}/daterangepicker/`,
+      `${nodePath}/swiper`
     ],
     path: `${distPath}/assets/style`,
   },
@@ -49,6 +50,7 @@ let envOptions = {
     src: [
       `${nodePath}/jquery/dist/**/jquery.min.js`,
       `${nodePath}/bootstrap/dist/js/**/bootstrap.bundle.min.js`,
+      `${nodePath}/swiper/js/**/swiper.min.js`,
       `${nodePath}/daterangepicker/moment.min.js`,
       `${nodePath}/daterangepicker/daterangepicker.js`
     ],

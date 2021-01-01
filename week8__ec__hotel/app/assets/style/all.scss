@@ -3,6 +3,7 @@
 
 // vendors
 @import './vendor/boostrap';
+@import 'swiper';
 @import 'daterangepicker';
 // base
 @import "./base/base";
@@ -17,6 +18,7 @@
 @import "./utils/border";
 @import "./utils/fontSize";
 @import "./utils/imageRatio";
+@import "./utils/hover";
 
 // components
 @import "./components/pagination";
@@ -27,7 +29,6 @@
 @import "./components/tag";
 
 // pages
-@import "./pages/pages";
 @import "./pages/home";
 @import "./pages/searchResult";
 @import "./pages/detail";

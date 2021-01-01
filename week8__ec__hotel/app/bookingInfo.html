@@ -6,93 +6,140 @@ page: bookingInfo
 ---
 <section class="container pt-4  mb-8">
   <div class="row">
-    <!-- booking -->
+    <!-- 預定紀錄 -->
     <div class="col-12 col-lg-8 order-2 order-lg-1 pt-3 pt-lg-0">
-      <h4 class="mb-5 mb-md-4">My Bookings</h4>
-      <ul class="tabList">
-        <li class="tabList__item"><a href="#" class="tabList__link active">Upcoming</a></li>
-        <li class="tabList__item"><a href="#" class="tabList__link">Completed</a></li>
+      <h2 class="mb-5 mb-md-4 title fsz-5">My Bookings</h2>
+      <ul class="nav nav-pills tabList" id="pills-tab" role="tablist">
+        <li class="tabList__item">
+          <a href="#bookingPanel1" id="bookingTab1" class="tabList__link mr-5 active" data-toggle="pill" role="tab" aria-controls="bookingPanel1" aria-selected="true">
+            Upcoming
+          </a>
+        </li>
+        <li class="tabList__item" role="presentation">
+          <a href="#bookingPanel2" id="bookingTab2" class="tabList__link" data-toggle="pill" role="tab" aria-controls="bookingPanel2" aria-selected="false">
+            Completed
+          </a>
+        </li>
       </ul>
       <!-- bookingInfo - List -->
-      <ul>
-        <li class="bookingInfo-list row no-gutters">
-          <div class="col-md-4">
-            <a class="d-block imgRatio-1 imgRatio-md-2">
-              <img class="bookingInfo-list__img" src="assets/images/Rachada1.jpg" alt="room">
-            </a>
-          </div>
-          <div class="col-md-8 d-flex align-items-center">
-            <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
-              <ul class="mb-5 mb-md-0">
-                <li class="d-flex mb-2">
-                  <span class="material-icons">hotel</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">Rachada Hotel</p>
-                    <p class="fsz-2 text-info">Standard Double Room</p>
-                  </div>
-                </li>
-                <li class="d-flex mb-2">
-                  <span class="material-icons">date_range</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
-                    <p class="fsz-2 text-info">2 nights・2 adults</p>
-                  </div>
-                </li>
-                <li class="d-flex">
-                  <span class="material-icons">attach_money</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">TWD 4,633</p>
-                    <p class="fsz-2 text-info">includes taxes and charges</p>
-                  </div>
-                </li>
-              </ul>
-              <a href="detail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+      <div class="home-choiceHotel tab-content">
+        <ul class="tab-pane fade show active" id="bookingPanel1" role="tabpanel" aria-labelledby="bookingTab1">
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Rachada1.jpg" alt="room">
+              </a>
             </div>
-          </div>
-        </li>
-        <li class="bookingInfo-list row no-gutters">
-          <div class="col-md-4">
-            <a class="d-block imgRatio-1 imgRatio-md-2">
-              <img class="bookingInfo-list__img" src="assets/images/Chatuchack1.jpg" alt="room">
-            </a>
-          </div>
-          <div class="col-md-8 d-flex align-items-center">
-            <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
-              <ul class="mb-5 mb-md-0">
-                <li class="d-flex mb-2">
-                  <span class="material-icons">hotel</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">WOW Life Hotel</p>
-                    <p class="fsz-2 text-info">Standard Double Room</p>
-                  </div>
-                </li>
-                <li class="d-flex mb-2">
-                  <span class="material-icons">date_range</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">8 Sep 2020 - 15 Sep 2020</p>
-                    <p class="fsz-2 text-info">7 nights・2 adults</p>
-                  </div>
-                </li>
-                <li class="d-flex">
-                  <span class="material-icons">attach_money</span>
-                  <div class="pl-3">
-                    <p class="font-weight-bold">TWD 13,084</p>
-                    <p class="fsz-2 text-info">includes taxes and charges</p>
-                  </div>
-                </li>
-              </ul>
-              <a href="detail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">Rachada Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
+                      <p class="fsz-2 text-info">2 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 4,633</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Chatuchack1.jpg" alt="room">
+              </a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">WOW Life Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">8 Sep 2020 - 15 Sep 2020</p>
+                      <p class="fsz-2 text-info">7 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 13,084</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="tab-pane fade" id="bookingPanel2" role="tabpanel" aria-labelledby="bookingTab2">
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Rachada1.jpg" alt="room">
+              </a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">Rachada Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
+                      <p class="fsz-2 text-info">2 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 4,633</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- Profile -->
     <div class="col-12 col-lg-4 order-1 order-lg-2 mb-6 mb-lg-0">
       <!-- Profile / title -->
       <div class="d-flex justify-content-between align-items-center mb-3 mb-md-5">
         <div class="d-flex align-items-center">
-          <h4 class="mr-2">Profile</h4>
+          <h2 class="title fsz-5 mr-2">Profile</h2>
           <p class="tag tag--rounded bg-primary d-flex fx-cc fsz-1 text-white">
             <span class="material-icons iconSize-2">check</span>
             VERIFIED
@@ -101,7 +148,7 @@ page: bookingInfo
         <a href="#" class="text-primary font-weight-bold fsz-2">EDIT</a>
       </div>
       <!-- Profile / info -->
-      <div class="p-5 bg-gray-100 rounded">
+      <div class="p-5 bg-secondary rounded">
         <ul class="d-block d-md-flex d-lg-block">
           <li class="w-100 mb-lg-5 d-flex flex-wrap justify-content-between justify-content-md-left justify-content-lg-between">
             <div class="w-50">

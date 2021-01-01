@@ -4,6 +4,7 @@ layout: ./app/layout/layout.ejs
 engine: ejs
 page: home
 ---
+<!-- 輪播 -->
 <section class="home-masthead">
   <div class="h-100 d-flex align-items-center">
     <h1 class="home-masthead__title font-weight-bold text-white">Discover your ideal hotel</h1>
@@ -30,14 +31,14 @@ page: home
     </div>
   </div>
 </section>
-
+<!-- 搜尋條件 -->
 <section class="container">
   <div class="row">
     <div class="col-md-10 offset-md-1">
-      <form class="home-selectHotel bg-gray-100 d-lg-flex p-5">
+      <form class="home-selectHotel bg-secondary d-lg-flex p-5">
         <!-- 選擇目的 -->
         <div class="form-control btn-group dropnone p-0 mr-3 mb-2 mb-lg-0">
-          <button id="btnDestination" type="button" class="btn text-left dropdown-toggle text-gray-800"
+          <button id="btnDestination" type="button" class="btn text-left dropdown-toggle text-info"
             data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
             <span class="material-icons mr-3 text-dark">
               location_on
@@ -46,24 +47,24 @@ page: home
           </button>
           <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
             <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-6 mr-2">star</span>
+              <span class="material-icons iconSize-3 mr-2">star</span>
               <div>
                 <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-gray-800">Thailand</p>
+                <p class="fsz-1 text-info">Thailand</p>
               </div>
             </a>
             <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-6 mr-2">star</span>
+              <span class="material-icons iconSize-3 mr-2">star</span>
               <div>
                 <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-gray-800">Thailand</p>
+                <p class="fsz-1 text-info">Thailand</p>
               </div>
             </a>
             <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-6 mr-2">star</span>
+              <span class="material-icons iconSize-3 mr-2">star</span>
               <div>
                 <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-gray-800">Thailand</p>
+                <p class="fsz-1 text-info">Thailand</p>
               </div>
             </a>
           </div>
@@ -74,12 +75,12 @@ page: home
             <span class="material-icons mr-3">
               date_range
             </span>
-            <span class="text-gray-800" id="js-datepicker-content">Check-in / Check-out</span>
+            <span class="text-info" id="js-datepicker-content">Check-in / Check-out</span>
           </button>
         </div>
         <!-- 選擇人數 -->
         <div class="form-control btn-group dropnone p-0 mr-3 mb-2 mb-lg-0">
-          <button id="btnGuest" type="button" class="btn text-left dropdown-toggle text-gray-800" data-toggle="dropdown"
+          <button id="btnGuest" type="button" class="btn text-left dropdown-toggle text-info" data-toggle="dropdown"
             aria-haspopup="false" aria-expanded="false">
             <span class="material-icons mr-3 text-dark">
               person
@@ -115,114 +116,181 @@ page: home
           </ul>
         </div>
         <!-- 搜尋 -->
-        <a href="searchResult.html" class="btn btn-primary py-3 px-6 d-block" type="button">SEARCH</a>
+        <a href="searchResult.html" class="w-100 w-md-auto btn btn-primary py-3 px-6 d-block" type="button">SEARCH</a>
       </form>
     </div>
   </div>
   </div>
 </section>
-
-<section class="container pt-7 pb-7">
-  <h2 class="fsz-5 display-2 font-weight-bold mb-5">Top Choices</h2>
-  <ul class="tabList tabList--border mb-sm-5">
-    <li class="tabList__item"><a href="#" class="tabList__link pl-5 fsz-4 text-center">Okinawa<span class="fsz-1 font-top">67</span></a></li>
-    <li class="tabList__item"><a href="#" class="tabList__link pl-5 active fsz-4 text-center">Bali<span class="fsz-1 font-top">128</span></a></li>
-    <li class="tabList__item"><a href="#" class="tabList__link pl-5 fsz-4 text-center">Taipei<span class="fsz-1 font-top">53</span></a></li>
+<!-- 首選 -->
+<section class="container pt-3 pb-4 pt-md-7 pb-md-7">
+  <h2 class="title fsz-5 fsz-md-6 mb-5">Top Choices</h2>
+  <!-- Place / filter -->
+  <ul class="nav nav-pills tabList tabList--border mb-5" id="pills-tab" role="tablist">
+    <li class="tabList__item">
+      <a href="#choiceTab1" id="choicePanel1" class="tabList__link tabList__link--light pl-2 pr-2 pr-md-5 pl-md-5 fsz-4 active" data-toggle="pill" role="tab" aria-controls="choiceTab1" aria-selected="true">
+        Okinawa
+        <sup class="fsz-1">67</sup>
+      </a>
+    </li>
+    <li class="tabList__item" role="presentation">
+      <a href="#choiceTab2" id="choicePanel2" class="tabList__link tabList__link--light pl-2 pr-2 pr-md-5 pl-md-5 fsz-4" data-toggle="pill" role="tab" aria-controls="choiceTab2" aria-selected="false">
+        Bali
+        <sup class="fsz-1">128</sup>
+      </a>
+    </li>
+    <li class="tabList__item" role="presentation">
+      <a href="#choiceTab3" id="choicePanel3" class="tabList__link tabList__link--light pl-2 pr-2 pr-md-5 pl-md-5 fsz-4" data-toggle="pill" role="tab" aria-controls="choiceTab3" aria-selected="false">
+        Taipei
+        <sup class="fsz-1">67</sup>
+      </a>
+    </li>
   </ul>
-  <div class="home-choiceHotel">
-    <div class="home-choiceHotel__arrowright selectArrow selectArrow--right d-none d-md-initial"></div>
-    <div class="home-choiceHotel__arrowleft selectArrow selectArrow--left d-none d-md-initial"></div>
-    <ul class="row home-choiceHotel__field">
-      <li class="col-md-4 col-lg-3">
-        <div class="imgRatio-1 mb-2">
-          <img class="rounded" src="assets/images/top1.jpg" alt="">
-        </div>
-        <p class="mb-2 font-weight-bold">Hotel Aqua</p>
-        <div class="d-flex mb-2">
-          <ul class="d-flex">
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-          </ul>
-          <p class="text-gray-800 fsz-2">5.0</p>
-          <p class="text-gray-600 fsz-1">・2k reviews</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <p class="text-gray-800 mr-2 fsz-2">TWD 2,480</p>
-          <p class="text-gray-600 fsz-1"><del>TWD 3,980</del></p>
-        </div>
-      </li>
-      <li class="col-md-4 col-lg-3">
-        <div class="imgRatio-1 mb-2">
-          <img class="rounded" src="assets/images/top2.jpg" alt="">
-        </div>
-        <p class="mb-2 font-weight-bold">Hotel Aqua</p>
-        <div class="d-flex mb-2">
-          <ul class="d-flex">
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-          </ul>
-          <p class="text-gray-800 fsz-2">5.0</p>
-          <p class="text-gray-600 fsz-1">・2k reviews</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <p class="text-gray-800 mr-2 fsz-2">TWD 2,480</p>
-          <p class="text-gray-600 fsz-1"><del>TWD 3,980</del></p>
-        </div>
-      </li>
-      <li class="col-md-4 col-lg-3">
-        <div class="imgRatio-1 mb-2">
-          <img class="rounded" src="assets/images/top3.jpg" alt="">
-        </div>
-        <p class="mb-2 font-weight-bold">Hotel Aqua</p>
-        <div class="d-flex mb-2">
-          <ul class="d-flex">
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-          </ul>
-          <p class="text-gray-800 fsz-2">5.0</p>
-          <p class="text-gray-600 fsz-1">・2k reviews</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <p class="text-gray-800 mr-2 fsz-2">TWD 2,480</p>
-          <p class="text-gray-600 fsz-1"><del>TWD 3,980</del></p>
-        </div>
-      </li>
-      <li class="col-md-4 col-lg-3">
-        <div class="imgRatio-1 mb-2">
-          <img class="rounded" src="assets/images/top4.jpg" alt="">
-        </div>
-        <p class="mb-2 font-weight-bold">Hotel Aqua</p>
-        <div class="d-flex mb-2">
-          <ul class="d-flex">
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-            <li class="iconSize-md-3 material-icons">star_rate</li>
-          </ul>
-          <p class="text-gray-800 fsz-2">5.0</p>
-          <p class="text-gray-600 fsz-1">・2k reviews</p>
-        </div>
-        <div class="d-flex align-items-center">
-          <p class="text-gray-800 mr-2 fsz-2">TWD 2,480</p>
-          <p class="text-gray-600 fsz-1"><del>TWD 3,980</del></p>
-        </div>
-      </li>
-    </ul>
+  <!-- Place / result -->
+  <div class="home-choiceHotel tab-content">
+    <div class="tab-pane fade show active" id="choiceTab1" role="tabpanel" aria-labelledby="choicePanel1">
+      <div class="row swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top1.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top2.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top3.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top4.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top1.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+          <li class="swiper-slide col-9 col-md-4 col-lg-3">
+            <a href="searchDetail.html" class="d-block imgRatio-1 rounded mb-2">
+              <img class="hv-zoom" src="assets/images/top2.jpg" alt="">
+            </a>
+            <p class="mb-2 font-weight-bold">Hotel Aqua</p>
+            <div class="d-flex mb-2">
+              <ul class="d-flex">
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+                <li class="iconSize-md-3 material-icons">star_rate</li>
+              </ul>
+              <p class="text-info fsz-2">5.0</p>
+              <p class="text-custom-gray-300 fsz-1">・2k reviews</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <p class="text-info mr-2 fsz-2">TWD 2,480</p>
+              <p class="text-custom-gray-300 fsz-1"><del>TWD 3,980</del></p>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="d-none d-lg-flex home-choiceHotel__arrowright selectArrow selectArrow--right"></div>
+    </div>
+    <div class="tab-pane fade" id="choiceTab2" role="tabpanel" aria-labelledby="choicePanel2">view 2</div>
+    <div class="tab-pane fade" id="choiceTab3" role="tabpanel" aria-labelledby="choicePanel3">view 3</div>
   </div>
 </section>
-
-<section class="container pt-7 pb-7">
-  <h2 class="fsz-5 display-2 font-weight-bold mb-5">Popular Destinations</h2>
+<!-- Popular Destinations -->
+<section class="container pt-3 pb-4 pt-md-7 pb-md-7">
+  <h2 class="title fsz-5 fsz-md-6 mb-5">Popular Destinations</h2>
   <ul class="row">
     <li class="col-12 col-md-6 col-lg-4 mb-2 mb-md-0">
       <div class="infoList d-flex mb-md-5">
@@ -231,7 +299,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">JAPAN</p>
+            <p class="text-custom-gray-100 fsz-1">JAPAN</p>
             <p class="text-white fsz-5">Osaka</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -245,7 +313,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">JAPAN</p>
+            <p class="text-custom-gray-100 fsz-1">JAPAN</p>
             <p class="text-white fsz-5">Kyoto</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -259,7 +327,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">ICELAND</p>
+            <p class="text-custom-gray-100 fsz-1">ICELAND</p>
             <p class="text-white fsz-5">Reykjavík</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -273,7 +341,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">FRANCE</p>
+            <p class="text-custom-gray-100 fsz-1">FRANCE</p>
             <p class="text-white fsz-5">Paris</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -287,7 +355,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">ITALY</p>
+            <p class="text-custom-gray-100 fsz-1">ITALY</p>
             <p class="text-white fsz-5">Roma</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -301,7 +369,7 @@ page: home
         </div>
         <div class="infoList__body radial-gradient d-flex justify-content-between align-items-center">
           <div>
-            <p class="text-gray-200 fsz-1">THAILAND</p>
+            <p class="text-custom-gray-100 fsz-1">THAILAND</p>
             <p class="text-white fsz-5">Bangkok</p>
           </div>
           <span class="text-white material-icons">keyboard_arrow_down</span>
@@ -310,38 +378,40 @@ page: home
     </li>
   </ul>
 </section>
-
-<section class="container pt-7 pb-7">
+<!-- Get Inspiration -->
+<section class="container pt-3 pb-7 pt-md-7">
   <div class="d-flex justify-content-between align-items-center mb-5">
-    <h2 class="fsz-5 display-2 font-weight-bold">Get Inspiration</h2>
-    <button type="button" class="btn btn-outline-primary">see more</button>
+    <h2 class="title fsz-5 fsz-md-6">Get Inspiration</h2>
+    <a href="#" type="button" class="btn btn-outline-primary">see more</a>
   </div>
-  <ul class="row">
-    <li class="col-md-4">
-      <div class="imgRatio-1 mb-4 mb-md-5">
-        <img class="rounded" src="assets/images/italy.jpg" alt="">
-      </div>
-      <h4 class="fsz-4 fsz-md-5 mb-2">The fifth most visited country</h4>
-      <p class="fsz-1 fsz-md-3 text-gray-800">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
-    </li>
-    <li class="col-md-4">
-      <div class="imgRatio-1 mb-5">
-        <img class="rounded" src="assets/images/Bangkok.jpg" alt="">
-      </div>
-      <h4 class="mb-2">Visit Thailand for Bangkok</h4>
-      <p class="text-gray-800">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
-    </li>
-    <li class="col-md-4">
-      <div class="imgRatio-1 mb-5">
-        <img class="rounded" src="assets/images/italy.jpg" alt="">
-      </div>
-      <h4 class="mb-2">Lord of the Rings Tour</h4>
-      <p class="text-gray-800">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
-    </li>
-  </ul>
+  <div class="row swiper-container">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide col-9 col-md-4">
+        <div class="imgRatio-1 rounded mb-4 mb-md-5">
+          <img class="hv-zoom" src="assets/images/italy.jpg" alt="italy">
+        </div>
+        <h4 class="fsz-4 fsz-md-5 mb-2">The fifth most visited country</h4>
+        <p class="fsz-1 fsz-md-3 text-info">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
+      </li>
+      <li class="swiper-slide col-9 col-md-4">
+        <div class="imgRatio-1 rounded mb-5">
+          <img class="hv-zoom" src="assets/images/Bangkok.jpg" alt="Bangkok">
+        </div>
+        <h4 class="fsz-4 fsz-md-5 mb-2">Visit Thailand for Bangkok</h4>
+        <p class="fsz-1 fsz-md-3 text-info">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
+      </li>
+      <li class="swiper-slide col-9 col-md-4">
+        <div class="imgRatio-1 rounded mb-5">
+          <img class="hv-zoom" src="assets/images/NewZealand.jpg" alt="NewZealand">
+        </div>
+        <h4 class="fsz-4 fsz-md-5 mb-2">Lord of the Rings Tour</h4>
+        <p class="fsz-1 fsz-md-3 text-info">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+      </li>
+    </ul>
+  </div>
 </section>
-
-<section class="bg-gray-100 home-contact">
+<!-- 訂閱 -->
+<section class="bg-secondary home-contact">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8 mb-3 mb-md-5">
@@ -349,7 +419,7 @@ page: home
       </div>
       <div class="col-12 col-md-8 col-lg-6 mb-4">
         <div class="input-group">
-          <input type="text" class="form-control border-primary" placeholder="Your email address"
+          <input type="text" class="form-control" placeholder="Your email address"
             aria-label="Recipient's username" aria-describedby="button-addon2">
           <div class="input-group-append">
             <button class="btn btn-primary" type="button" id="button-addon2">SUBSCRIBE</button>
