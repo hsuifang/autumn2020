@@ -11,7 +11,16 @@ $(function() {
   },function(start, end) {
     document.getElementById("js-datepicker-content").innerText = `${start.format('YYYY-MM-DD')} - ${end.format('YYYY-MM-DD') }`
   });
-  // index end --
+
+  // serach resault
+  const searchResultSortId = 'js-sort'
+  $('.searchResult').click(function(e) {
+    if (e.target.id === searchResultSortId || e.target.parentElement.id === searchResultSortId) {
+      $('.searchResult-sort').toggleClass('show')
+    } else {
+      $('.searchResult-sort').removeClass('show')
+    }
+  })
 
   // reservationDetail
   $('#collapseRoomDetail').on('show.bs.collapse', function () {

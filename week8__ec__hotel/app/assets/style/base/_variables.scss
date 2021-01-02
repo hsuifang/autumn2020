@@ -9,6 +9,8 @@ $fontSizes: (
   4: $fsz * 1.25, // 20
   5: $fsz * 1.5, // 24
   6: $fsz * 2, // 32
+  7: $fsz * 2.5, // 36
+  8: $fsz * 3 // 48
 );
 
 
@@ -49,7 +51,7 @@ $black: #000 !default;
 $custom-gray-100: #FFFFFF98;
 $custom-gray-200: #FFFFFF00;
 $custom-gray-300: #00000061; // 500
-$custom-gray-400: #00000099;
+$custom-gray-400: #0000009a;
 $custom-gray-500: #000000DE;
 $custom-gray-600: #121212;
 $custom-gray-700: #FFFFFFde;

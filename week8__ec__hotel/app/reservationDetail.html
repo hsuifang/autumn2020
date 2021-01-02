@@ -5,7 +5,7 @@ engine: ejs
 page: reservationDetail
 ---
 <section class="container pt-md-5 pb-8">
-  <div class="row justify-content-center">
+  <div class="row align-items-start justify-content-center">
     <!-- mobile / 查看detail  -->
     <div class="col-12 bg-secondary pt-2 pb-2 d-flex fx-btc d-md-none mb-4">
       <p class="fsz-2 font-weight-bold js-detailPrize"><span class="mr-2 font-weight-normal text-info">Total</span>TWD 4,633</p>
@@ -49,7 +49,7 @@ page: reservationDetail
     </div>
     <!-- 個資填寫 -->
     <form class="col-12 col-md-6 col-lg-5">
-      <h2 class="mb-4 title fsz-5 fsz-md-6">Reservation details</h2>
+      <h2 class="mb-4 font-raleway fsz-5 fsz-md-6">Reservation details</h2>
       <ul>
         <li class="form-group">
           <label class="text-info mb-1" for="name">Name</label>
@@ -68,36 +68,38 @@ page: reservationDetail
       <a href="#" class="d-block text-center text-primary">Reserve now, pay at stay</a>
     </form>
     <!-- 訂購資訊 -->
-    <ul class="d-none d-md-block col-md-6 col-lg-5 bg-secondary rounded p-md-5">
-      <li class="pb-md-5 border-bottom border-white">
-        <h6 class="mb-md-3">Booking details</h6>
-        <ul class="fsz-md-2 text-info">
-          <li class="mb-md-2">17 June 2020 - 19 June 2020・2 nights</li>
-          <li class="mb-md-2">2 adults・1 room</li>
-          <li class="mb-md-2">Rachada Hotel</li>
-        </ul>
-      </li>
-      <li class="pt-md-5 pb-md-5 border-bottom border-white">
-        <h6 class="mb-md-3">Price summary</h6>
-        <ul class="fsz-md-2 text-info">
-          <li class="d-flex justify-content-between align-items-center mb-md-2">
-            <p>Deluxe Suite with Pool</p>
-            <p>TWD 3,960</p>
-          </li>
-          <li class="d-flex justify-content-between align-items-center mb-md-2">
-            <p>VAT (7%)</p>
-            <p>TWD 277</p>
-          </li>
-          <li class="d-flex justify-content-between align-items-center mb-md-2">
-            <p>Property service charge</p>
-            <p>TWD 396</p>
-          </li>
-        </ul>
-      </li>
-      <li class="pt-md-5 d-flex justify-content-between align-items-center">
-        <p class="text-info">Total</p>
-        <h6>TWD 4,633</h6>
-      </li>
-    </ul>
+    <div class="d-none d-md-block col-md-6 col-lg-5">
+      <ul class=" bg-secondary rounded p-md-5">
+        <li class="pb-md-5 border-bottom border-white">
+          <h6 class="mb-md-3">Booking details</h6>
+          <ul class="fsz-md-2 text-info">
+            <li class="mb-md-2">17 June 2020 - 19 June 2020・2 nights</li>
+            <li class="mb-md-2">2 adults・1 room</li>
+            <li class="mb-md-2">Rachada Hotel</li>
+          </ul>
+        </li>
+        <li class="pt-md-5 pb-md-5 border-bottom border-white">
+          <h6 class="mb-md-3">Price summary</h6>
+          <ul class="fsz-md-2 text-info">
+            <li class="d-flex justify-content-between align-items-center mb-md-2">
+              <p>Deluxe Suite with Pool</p>
+              <p>TWD 3,960</p>
+            </li>
+            <li class="d-flex justify-content-between align-items-center mb-md-2">
+              <p>VAT (7%)</p>
+              <p>TWD 277</p>
+            </li>
+            <li class="d-flex justify-content-between align-items-center mb-md-2">
+              <p>Property service charge</p>
+              <p>TWD 396</p>
+            </li>
+          </ul>
+        </li>
+        <li class="pt-md-5 d-flex justify-content-between align-items-center">
+          <p class="text-info">Total</p>
+          <h6>TWD 4,633</h6>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>

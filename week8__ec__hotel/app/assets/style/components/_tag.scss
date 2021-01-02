@@ -9,7 +9,7 @@
   }
 }
 .tag {
-  color: $gray-800;
+  color: $custom-gray-400;
   background: $secondary;
   border-radius: 13px;
   &--rounded {
@@ -20,5 +20,9 @@
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
+    @include media-breakpoint-up(md){
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
   }
 }
