@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOHA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/all.css">
+</head>
+
+<body>
+  <section class="sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light pt-md-5 pb-md-5">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/logo-aloha.svg" loading="lazy">
+        </a>
+        <a href="login.html" class="nav-link d-md-none">
+          Login
+        </a>
+        <div class="collapse navbar-collapse" id="mobileMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown p-2 p-md-0">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons">
+                  language
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">日文</a>
+                <a class="dropdown-item" href="#">polski</a>
+              </div>
+            </li>
+            
+            <li class="nav-item dropdown p-2 p-md-0">
+              <a class="nav-link dropdown-toggle pr-0" href="#" id="navProfileDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="nav-profileImg" src="assets/images/profile.jpg" alt="">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navProfileDropDown">
+                <a class="dropdown-item" href="login.html">logout</a>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <main class="bookingInfo">
+    <section class="container pt-4  mb-8">
+  <div class="row">
+    <!-- 預定紀錄 -->
+    <div class="col-12 col-lg-8 order-2 order-lg-1 pt-3 pt-lg-0">
+      <h2 class="mb-5 mb-md-4 font-raleway fsz-5">My Bookings</h2>
+      <ul class="nav nav-pills tabList" id="pills-tab" role="tablist">
+        <li class="tabList__item">
+          <a href="#bookingPanel1" id="bookingTab1" class="tabList__link mr-5 active" data-toggle="pill" role="tab" aria-controls="bookingPanel1" aria-selected="true">
+            Upcoming
+          </a>
+        </li>
+        <li class="tabList__item" role="presentation">
+          <a href="#bookingPanel2" id="bookingTab2" class="tabList__link" data-toggle="pill" role="tab" aria-controls="bookingPanel2" aria-selected="false">
+            Completed
+          </a>
+        </li>
+      </ul>
+      <!-- bookingInfo - List -->
+      <div class="home-choiceHotel tab-content">
+        <ul class="tab-pane fade show active" id="bookingPanel1" role="tabpanel" aria-labelledby="bookingTab1">
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Rachada1.jpg" alt="room">
+              </a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">Rachada Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
+                      <p class="fsz-2 text-info">2 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 4,633</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
+            </div>
+          </li>
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Chatuchack1.jpg" alt="room">
+              </a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">WOW Life Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">8 Sep 2020 - 15 Sep 2020</p>
+                      <p class="fsz-2 text-info">7 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 13,084</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="tab-pane fade" id="bookingPanel2" role="tabpanel" aria-labelledby="bookingTab2">
+          <li class="bookingInfo-list row no-gutters">
+            <div class="col-md-4">
+              <a class="d-block imgRatio-1 imgRatio-md-2 bookingInfo-list__img">
+                <img class="hv-zoom" src="assets/images/Rachada1.jpg" alt="room">
+              </a>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="bookingInfo-list__content d-block d-md-flex w-100 justify-content-md-between">
+                <ul class="mb-5 mb-md-0">
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">hotel</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">Rachada Hotel</p>
+                      <p class="fsz-2 text-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-2">
+                    <span class="material-icons">date_range</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">17 June 2020 - 19 June 2020</p>
+                      <p class="fsz-2 text-info">2 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons">attach_money</span>
+                    <div class="pl-3">
+                      <p class="font-weight-bold">TWD 4,633</p>
+                      <p class="fsz-2 text-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <a href="searchDetail.html" class="font-weight-bold text-primary fsz-2 fsz-md-3">VIEW DETAILS</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Profile -->
+    <div class="col-12 col-lg-4 order-1 order-lg-2 mb-6 mb-lg-0">
+      <!-- Profile / title -->
+      <div class="d-flex justify-content-between align-items-center mb-3 mb-md-5">
+        <div class="d-flex align-items-center">
+          <h2 class="font-raleway fsz-5 mr-2">Profile</h2>
+          <p class="tag tag--rounded bg-primary d-flex fx-cc fsz-1 text-white">
+            <span class="material-icons iconSize-2">check</span>
+            VERIFIED
+          </p>
+        </div>
+        <a href="#" class="text-primary font-weight-bold fsz-2">EDIT</a>
+      </div>
+      <!-- Profile / info -->
+      <div class="p-5 bg-secondary rounded">
+        <ul class="d-block d-md-flex d-lg-block">
+          <li class="w-100 mb-lg-5 d-flex flex-wrap justify-content-between justify-content-md-left justify-content-lg-between">
+            <div class="w-50">
+              <p class="font-weight-bold mb-5">User details</p>
+              <div class="d-flex">
+                <img class="d-none d-md-block d-lg-none bookingInfo-profileImg bookingInfo-profileImg-md mr-md-3" src="assets/images/profile.jpg" alt="bookingInfo-profileImg">
+                <ul>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">David Lin</li>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">david0520@mail.com.tw</li>
+                  <li class="mb-3 text-info fsz-2 fsz-lg-3">+886 9 32 456 789</li>
+                </ul>
+              </div>
+            </div>
+            <img class="d-md-none d-lg-block bookingInfo-profileImg bookingInfo-profileImg-md" src="assets/images/profile.jpg" alt="bookingInfo-profileImg">
+          </li>
+          <li class="w-100">
+            <p class="font-weight-bold mb-5">Payment methods</p>
+            <ul class="d-flex text-info">
+              <li class="w-50 p-3 bg-white rounded mr-2">
+                <p class="fsz-2">xxxx-xxxx-7890</p>
+                <p class="fsz-2">DAVID LIN</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fsz-2">08/2029</p>
+                  <span class="material-icons iconSize-3">credit_card</span>
+                </div>
+              </li>
+              <li class="w-50 p-3 bg-white rounded d-flex fx-cc">
+                <a href="#">
+                  <span class="material-icons iconSize-5 rounded-circle bg-primary text-white">add</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>
+  </main>
+  <footer class="container">
+    <div class="d-md-flex justify-content-md-between align-items-md-center py-4 border-top">
+      <div class="d-block d-md-flex align-items-md-center">
+        <ul class="d-flex text-info pl-md-5 justify-content-center">
+          <li><a class="text-info fsz-2" href="#">FAQs</a></li>
+          <li class="ml-4"><a class="text-info fsz-2" href="#">Terms of use</a></li>
+          <li class="ml-4"><a class="text-info fsz-2" href="#">Privacy policy</a></li>
+        </ul>
+        <p class="fsz-2 ml-md-4 order-1 text-center text-info">© 2020. All Rights Reserved.</p>
+      </div>
+      <ul class="d-none d-md-flex align-items-center ">
+        <li class="d-flex align-items-center mr-3">
+          <a class="dropdown-toggle d-flex align-items-center fsz-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons pr-1 iconSize-4 text-dark">language</span>
+            English
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">日文</a>
+            <a class="dropdown-item" href="#">polski</a>
+          </div>
+        </li>
+        <li>
+          <a class="dropdown-toggle d-flex align-items-center fsz-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons pr-1 iconSize-4 text-dark">attach_money</span>
+            TWD
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">USD</a>
+            <a class="dropdown-item" href="#">YEN</a>
+            <a class="dropdown-item" href="#">TWD</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/vendors.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

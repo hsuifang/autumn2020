@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALOHA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/all.css">
+
+</head>
+
+<body>
+  <section class="sticky-top bg-white">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-light pt-md-5 pb-md-5">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/logo-aloha.svg" loading="lazy">
+        </a>
+        <a href="login.html" class="nav-link d-md-none">
+          Login
+        </a>
+        <div class="collapse navbar-collapse" id="mobileMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown p-2 p-md-0">
+              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="material-icons">
+                  language
+                </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">日文</a>
+                <a class="dropdown-item" href="#">polski</a>
+              </div>
+            </li>
+            <li class="nav-item p-2 p-md-0">
+              <a class="nav-link" href="#">Sign up </a>
+            </li>
+            <li class="nav-item d-none d-md-flex">
+              <a class="nav-link pr-0" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="bg-secondary">
+      <form class="container d-none d-md-flex pt-md-4 pb-md-4">
+        <!-- 選擇目的 -->
+        <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+          <button id="btnDestination" type="button" class="btn d-flex align-items-center dropdown-toggle text-info"
+            data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons mr-2 text-dark">
+              location_on
+            </span>
+            <div data-name="selectHotel-location" class="text-left">
+              <p class="text-dark fsz-1 font-weight-bold">DESTINATION</p>
+              <p class="text-info fsz-1">Bangkok, Thailand</p>
+            </div>
+          </button>
+          <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons iconSize-5 mr-1">star</span>
+              <div>
+                <p class="fsz-2">Bangkok</p>
+                <p class="fsz-1 text-info">Thailand</p>
+              </div>
+            </a>
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons iconSize-5 mr-1">star</span>
+              <div>
+                <p class="fsz-2">Bangkok</p>
+                <p class="fsz-1 text-info">Thailand</p>
+              </div>
+            </a>
+            <a class="dropdown-item d-flex" href="#">
+              <span class="material-icons iconSize-5 mr-1">star</span>
+              <div>
+                <p class="fsz-2">Bangkok</p>
+                <p class="fsz-1 text-info">Thailand</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- 選擇時間 -->
+        <div class="form-control p-0 btn-group mr-2 border-white">
+          <button id="js-datepicker" type="button" class="btn d-flex align-items-center text-left">
+            <span class="material-icons mr-2">
+              date_range
+            </span>
+            <div id="js-datepicker-content">
+              <p class="text-dark fsz-1 font-weight-bold">Check-in / Check-out</p>
+              <p class="text-info fsz-1">17 June - 19 June</p>
+            </div>
+          </button>
+        </div>
+        <!-- 選擇人數 -->
+        <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+          <button id="btnGuest" type="button" class="btn d-flex align-items-center dropdown-toggle text-info" data-toggle="dropdown"
+            aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons mr-2 text-dark">
+              person
+            </span>
+            <div data-name="selectHotel-guest" class="text-left">
+              <p class="text-dark fsz-1 font-weight-bold">GUESTS</p>
+              <p class="text-info fsz-1">2 adults・1 room</p>
+            </div>
+          </button>
+          <ul class="dropdown-menu py-2 bg-white w-100" aria-labelledby="btnGuest">
+            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+              <p>Adult</p>
+              <p class="d-flex justify-content-between align-items-center">
+                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                <span>2</span>
+                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+              </p>
+            </li>
+            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+              <p>Kid</p>
+              <p class="d-flex justify-content-between align-items-center">
+                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                <span>2</span>
+                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+              </p>
+            </li>
+            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
+              <p>room</p>
+              <p class="d-flex justify-content-between align-items-center">
+                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
+                <span>2</span>
+                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <!-- 搜尋 -->
+        <a href="searchResult.html" class="btn btn-primary py-3 px-5" type="button">SEARCH</a>
+      </form>
+    </div>
+  </section>
+  <main class="searchResult mb-10">
+    <!-- Mobile / 搜尋結果資訊 -->
+<section class="bg-secondary d-block d-md-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul class="d-flex justify-content-center text-info pb-2 pt-2">
+          <li class="pr-3 p-2 fsz-1 border-right border-white">Bangkok</li>
+          <li class="pr-3 pl-3 p-2 fsz-1 border-right border-white">17 June - 19 June</li>
+          <li class="pl-3 p-2 fsz-1">2 adults・1 room</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 主內容 -->
+<section class="container pt-4">
+  <div class="row">
+    <!-- Title -->
+    <h2 class="col-md-4 pb-3 pb-md-5 font-raleway text-center text-md-left">Bangkok<sup class="fsz-4 text-primary pl-1">3240</sup></h2>
+    <!-- Search config: not mobile mode -->
+    <div class="col-md-8 d-none d-md-flex align-items-end">
+      <ul class="tabList overflow-scoll">
+        <li class="tabList__item text-nowrap"><a href="#" class="tabList__link active mr-4">Recommended</a></li>
+        <li class="tabList__item text-nowrap"><a href="#" class="tabList__link mr-4">Lowest Price</a></li>
+        <li class="tabList__item text-nowrap"><a href="#" class="tabList__link mr-4">Best value</a></li>
+        <li class="tabList__item text-nowrap"><a href="#" class="tabList__link">Distance to City Center</a></li>
+      </ul>
+    </div>
+    <!-- Search config: mobile mode -->
+    <div class="col-12 d-flex flex-wrap d-md-none pb-3">
+      <button class="w-50 btn d-flex fx-cc border-right" data-toggle="modal" data-target="#filterListModal">
+        <span class="material-icons mr-2">filter_list</span>
+        <p class="fsz-2 font-weight-bold">FILTER</p>
+      </button>
+      <button class="w-50 btn d-flex fx-cc" type="button" id="js-sort">
+        <span class="material-icons mr-2">sort</span>
+        <p class="fsz-2 font-weight-bold">SORT</p>
+      </button>
+      <div class="w-100">
+        <ul class="w-100 searchResult-sort tabList flex-column">
+          <li class="tabList__item mb-3"><a href="#" class="tabList__link active mr-4">Recommended</a></li>
+          <li class="tabList__item mb-3"><a href="#" class="tabList__link mr-4">Lowest Price</a></li>
+          <li class="tabList__item mb-3"><a href="#" class="tabList__link mr-4">Best value</a></li>
+          <li class="tabList__item"><a href="#" class="tabList__link">Distance to City Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Filters Form -->
+    <div class="col-md-4 d-none d-md-block">
+      <form class="rounded bg-secondary">
+        <ul class="pl-md-5 pr-md-5">
+          <li class="border-bottom border-white pt-md-5 pb-md-5">
+            <legend class="font-weight-bolder mb-md-3">Deals</legend>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="dealsCheck1">
+              <label class="custom-control-label" for="dealsCheck1">Free cancellation</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="dealsCheck2">
+              <label class="custom-control-label" for="dealsCheck2">No prepayment</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3">
+              <input type="checkbox" class="custom-control-input" id="dealsCheck3">
+              <label class="custom-control-label" for="dealsCheck3">Special offers</label>
+            </div>
+          </li>
+          <li class="border-bottom border-white pt-md-5 pb-md-5">
+            <legend class="font-weight-bolder mb-md-3">Popular filter</legend>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="popularCheck1">
+              <label class="custom-control-label" for="popularCheck1">Breakfast included</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="popularCheck2">
+              <label class="custom-control-label" for="popularCheck2">Free Wi-Fi</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3">
+              <input type="checkbox" class="custom-control-input" id="popularCheck3">
+              <label class="custom-control-label" for="popularCheck3">Swimming pool</label>
+            </div>
+          </li>
+          <li class="border-bottom border-white pt-md-5 pb-md-5">
+            <legend class="font-weight-bolder mb-md-3">Budget</legend>
+            <input type="range" class="custom-range mb-md-3">
+            <div class="d-flex align-items-center">
+              <div class="form-control p-1 p-lg-2">
+                <p class="text-dark fsz-md-1 font-weight-bold">Min price</p>
+                <p class="text-info fsz-1 fsz-lg-2">TWD 800</p>
+              </div>
+              <p class="pl-2 pr-2 d-none d-lg-block">-</p>
+              <div class="form-control p-1 p-lg-2">
+                <p class="text-dark fsz-md-1 font-weight-bold">Max price</p>
+                <p class="text-info fsz-1 fsz-lg-2">TWD 4,000+</p>
+              </div>
+            </div>
+          </li>
+          <li class="border-bottom border-white pt-md-5 pb-md-5">
+            <legend class="font-weight-bolder mb-md-3">Rating</legend>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck1">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck1">
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                <span class="text-info">5.0</span>
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck2">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck2">
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                <span class="text-info">4.0</span>
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck3">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck3">
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                <span class="text-info">3.0</span>
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck4">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck4">
+                <span class="material-icons text-dark iconSize-3">star</span>
+                <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                <span class="text-info">2.0</span>
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck5">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck5">
+                <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                <span class="text-info">1.0</span>
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3">
+              <input type="checkbox" class="custom-control-input" id="ratingCheck6">
+              <label class="custom-control-label d-flex align-items-center" for="ratingCheck6">
+                <span class="text-info">Unrated</span>
+              </label>
+            </div>
+          </li>
+          <li class="pt-md-5 pb-md-5">
+            <legend class="font-weight-bolder mb-md-3">Stay type</legend>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="stayCheck1">
+              <label class="custom-control-label" for="stayCheck1">Hotel</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="stayCheck2">
+              <label class="custom-control-label" for="stayCheck2">Apartment</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3 mb-md-2">
+              <input type="checkbox" class="custom-control-input" id="stayCheck3">
+              <label class="custom-control-label" for="stayCheck3">Unique</label>
+            </div>
+            <div class="custom-control custom-checkbox fsz-md-3">
+              <input type="checkbox" class="custom-control-input" id="stayCheck4">
+              <label class="custom-control-label" for="stayCheck4">Hostel</label>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- SearchResultRoom -->
+    <div class="col-12 col-md-8">
+      <!-- 房間清單 -->
+      <ul class="searchResult-list mb-3 mb-md-5">
+        <li class="card pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Rachada1.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・2 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Rachada Hotel</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Deluxe Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+                <li class="tag tag--rounded">No prepayment</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <h5 class="fsz-3 fsz-lg-4">TWD 1,680</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Phaya.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Chatuchack, Bangkok<span class="text-info d-none d-lg-inline">・12 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Forever Place</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">5.0 (121)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">5.0 (121)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <p class="text-info fsz-1 fsz-md-2 fsz-lg-3"><del>TWD 1,980</del></p>
+                <h5 class="text-primary fsz-3 fsz-lg-4">TWD 1,680</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/roomB.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・2 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Rachada Hotel</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Deluxe Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+                <li class="tag tag--rounded">No prepayment</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <h5 class="fsz-3 fsz-lg-4">TWD 1,980</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Bangkapi.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・2 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">LUV Hotel</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <h5 class="fsz-3 fsz-lg-4">TWD 1,980</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Chatuchack1.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Chatuchack, Bangkok<span class="text-info d-none d-lg-inline">・12 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">WOW Life Hotel</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <p class="text-info fsz-1 fsz-md-2 fsz-lg-3"><del>TWD 2,880</del></p>
+                <h5 class="text-primary fsz-3 fsz-lg-4">TWD 1,980</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Chatuchack2.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Chatuchack, Bangkok<span class="text-info d-none d-lg-inline">・12 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Celebrity Palace</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <p class="text-info fsz-1 fsz-md-2 fsz-lg-3"><del>TWD 2,120</del></p>
+                <h5 class="text-primary fsz-3 fsz-lg-4">TWD 1,890</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/RangRak.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・2 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">RR Space</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Deluxe Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+                <li class="tag tag--rounded">No prepayment</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <h5 class="fsz-3 fsz-lg-4">TWD 2,090</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/Watana1.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・2 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Bangkok Hostel</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Deluxe Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+                <li class="tag tag--rounded">No prepayment</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <h5 class="fsz-3 fsz-lg-4">TWD 880</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/DinDaeng1.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Rachada, Bangkok<span class="text-info d-none d-lg-inline">・6 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">DD Space</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <p class="text-info fsz-1 fsz-md-2 fsz-lg-3"><del>TWD 1,700</del></p>
+                <h5 class="text-primary fsz-3 fsz-lg-4">TWD 1,240</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+        <li class="card pt-md-4 pb-md-4">
+          <a href="searchDetail.html" class="d-block card__img">
+            <img class="hv-zoom" src="assets/images/DinDaeng2.jpg" alt="room">
+          </a>
+          <div class="card__body d-flex flex-column flex-md-row justify-content-between">
+            <div>
+              <p class="fsz-1 text-primary">Chatuchack, Bangkok<span class="text-info d-none d-lg-inline">・12 km from center</span></p>
+              <h4 class="fsz-3 fsz-lg-4 mb-0 mb-md-3">Celebrity Palace</h4>
+              <div class="d-flex d-md-none">
+                <ul class="d-flex">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <p class="fsz-2 font-weight-bold text-info">Standard Double Room</p>
+              <p class="fsz-1 text-info">2 guests・1 bed (Queen size)</p>
+              <ul class="tagGroup pt-2 pt-lg-3 d-none d-md-flex flex-column flex-md-row align-items-start">
+                <li class="tag tag--rounded mb-1 mb-md-0">Free cancellation</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column justify-content-between">
+              <div class="d-none d-md-flex flex-md-column flex-lg-row">
+                <ul class="d-flex justify-content-end">
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                  <li class="iconSize-2 iconSize-md-3 material-icons">star_rate</li>
+                </ul>
+                <p class="text-info text-right text-lg-left fsz-1">4.0 (283)</p>
+              </div>
+              <div class="text-right pr-2 pr-md-0">
+                <p class="d-none d-md-block text-info fsz-1">per night</p>
+                <p class="text-info fsz-1 fsz-md-2 fsz-lg-3"><del>TWD 2,120</del></p>
+                <h5 class="text-primary fsz-3 fsz-lg-4">TWD 1,890</h5>
+              </div>
+            </div>
+          </div>       
+        </li>
+      </ul>
+      <!-- pagination -->
+      <div class="d-flex fx-btc bg-secondary p-3 rounded">
+        <button class="btn btn-outline-primary p-2">
+          <span class="d-none d-lg-inline">PREVIOUS</span>
+          <span class="material-icons d-block d-lg-none">navigate_before</span>
+        </button>
+        <ul class="pagination">
+          <li class="pagination__item pagination__item--active"><a class="fsz-3 fsz-md-4" href="#">1</a></li>
+          <li class="pagination__item"><a class="fsz-3 fsz-md-4" href="#">2</a></li>
+          <li class="pagination__item"><a class="fsz-3 fsz-md-4" href="#">3</a></li>
+          <li class="pagination__item"><a class="fsz-3 fsz-md-4" href="#">...</a></li>
+          <li class="pagination__item"><a class="fsz-3 fsz-md-4" href="#">6</a></li>
+        </ul>
+        <button class="btn btn-primary p-2">
+          <span class="d-none d-lg-inline">NEXT</span>
+          <span class="material-icons d-block d-lg-none">navigate_next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- modal -->
+<div class="modal fade searchResult-modal" id="filterListModal" tabindex="-1" role="dialog" aria-labelledby="filterListModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header sticky-top bg-white">
+        <h5 class="modal-title d-flex align-item-center"><span class="material-icons mr-2">filter_list</span>FILTER</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body bg-secondary">
+        <form>
+          <ul class="pt-4 pl-3 pr-3">
+            <li class="border-bottom border-white border-white">
+              <legend class="font-weight-bolder mb-3">Deals</legend>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalDealsCheck1">
+                <label class="custom-control-label" for="modalDealsCheck1">Free cancellation</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalDealsCheck2">
+                <label class="custom-control-label" for="modalDealsCheck2">No prepayment</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-5">
+                <input type="checkbox" class="custom-control-input" id="modalDealsCheck3">
+                <label class="custom-control-label" for="modalDealsCheck3">Special offers</label>
+              </div>
+            </li>
+            <li class="border-bottom border-white border-white pt-5">
+              <legend class="font-weight-bolder mb-3">Popular filter</legend>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalPopularCheck1">
+                <label class="custom-control-label" for="modalPopularCheck1">Breakfast included</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalPopularCheck2">
+                <label class="custom-control-label" for="modalPopularCheck2">Free Wi-Fi</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-5">
+                <input type="checkbox" class="custom-control-input" id="modalPopularCheck3">
+                <label class="custom-control-label" for="modalPopularCheck3">Swimming pool</label>
+              </div>
+            </li>
+            <li class="border-bottom border-white border-white pt-5">
+              <legend class="font-weight-bolder mb-3">Budget</legend>
+              <input type="range" class="custom-range mb-3">
+              <div class="d-flex align-items-center mb-5">
+                <div class="form-control p-1">
+                  <p class="text-dark fsz-md-1 font-weight-bold">Min price</p>
+                  <p class="text-info fsz-1 fsz-2">TWD 800</p>
+                </div>
+                <div class="form-control p-1">
+                  <p class="text-dark fsz-md-1 font-weight-bold">Max price</p>
+                  <p class="text-info fsz-1">TWD 4,000+</p>
+                </div>
+              </div>
+            </li>
+            <li class="border-bottom border-white border-white pt-5">
+              <legend class="font-weight-bolder mb-3">Rating</legend>
+              <div class="custom-control custom-checkbox fsz-md-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck1">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck1">
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                  <span class="text-info">5.0</span>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck2">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck2">
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                  <span class="text-info">4.0</span>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck3">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck3">
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                  <span class="text-info">3.0</span>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck4">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck4">
+                  <span class="material-icons text-dark iconSize-3">star</span>
+                  <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                  <span class="text-info">2.0</span>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck5">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck5">
+                  <span class="material-icons text-dark iconSize-3 mr-2">star</span>
+                  <span class="text-info">1.0</span>
+                </label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-5">
+                <input type="checkbox" class="custom-control-input" id="modalRatingCheck6">
+                <label class="custom-control-label d-flex align-items-center" for="modalRatingCheck6">
+                  <span class="text-info">Unrated</span>
+                </label>
+              </div>
+            </li>
+            <li class="pt-5">
+              <legend class="font-weight-bolder mb-3">Stay type</legend>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalStayCheck1">
+                <label class="custom-control-label" for="modalStayCheck1">Hotel</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalStayCheck2">
+                <label class="custom-control-label" for="modalStayCheck2">Apartment</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3 mb-2">
+                <input type="checkbox" class="custom-control-input" id="modalStayCheck3">
+                <label class="custom-control-label" for="modalStayCheck3">Unique</label>
+              </div>
+              <div class="custom-control custom-checkbox fsz-3">
+                <input type="checkbox" class="custom-control-input" id="modalStayCheck4">
+                <label class="custom-control-label" for="modalStayCheck4">Hostel</label>
+              </div>
+            </li>
+          </ul>
+        </form>
+        <!-- select -->
+        <div class="fixed-bottom bg-dark rounded-top p-4">
+          <p class="text-secondary fsz-4 mb-4">Find 1,245 results</p>
+          <div class="d-flex">
+            <button type="button" class="btn btn-outline-white btn-lg w-50 mr-2 fsz-3" data-dismiss="modal" aria-label="Close">CLEAR</button>
+            <button type="button" class="btn btn-primary btn-lg w-50 fsz-3 js-searchClose">FILTER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </main>
+  <section class="bg-secondary">
+    <div class="container">
+      <div class="row pt-4 pb-4 fx-btc">
+        <h2 class="col-12 col-md-4 col-lg-5 fsz-4 fsz-md-5 mb-3 mb-md-0 text-center text-md-left">Subscribe for Exclusive Offer</h2>
+        <div class="col-12 col-md-8 col-lg-7 input-group">
+          <input type="text" class="form-control" placeholder="Your email address"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="button-addon2">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="container">
+    <div class="d-md-flex fx-md-btc py-4 border-top">
+      <div class="d-block d-md-flex align-items-md-center">
+        <ul class="d-flex text-info pl-md-5 justify-content-center">
+          <li><a class="text-info fsz-2" href="#">FAQs</a></li>
+          <li class="ml-4"><a class="text-info fsz-2" href="#">Terms of use</a></li>
+          <li class="ml-4"><a class="text-info fsz-2" href="#">Privacy policy</a></li>
+        </ul>
+        <p class="fsz-2 ml-md-4 order-1 text-center text-info">© 2020. All Rights Reserved.</p>
+      </div>
+      <ul class="d-none d-md-flex align-items-center ">
+        <li class="d-flex align-items-center mr-3">
+          <a class="dropdown-toggle d-flex align-items-center fsz-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons pr-1 iconSize-4 text-dark">language</span>
+            English
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">日文</a>
+            <a class="dropdown-item" href="#">polski</a>
+          </div>
+        </li>
+        <li>
+          <a class="dropdown-toggle d-flex align-items-center fsz-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+            <span class="material-icons pr-1 iconSize-4 text-dark">attach_money</span>
+            TWD
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">USD</a>
+            <a class="dropdown-item" href="#">YEN</a>
+            <a class="dropdown-item" href="#">TWD</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/vendors.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
