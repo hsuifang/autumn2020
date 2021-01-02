@@ -1,29 +1,60 @@
 "use strict";
 
 $(function () {
-  // toggle menu
-  $('#js-mobileMenuToggle').on('click', function () {
-    $('#mobileMenu').toggle('slow');
-    $('.navigation__toggle').toggleClass('navigation__toggle--close');
-  }); // Modal
-  //
+  // index
+  // --------------
+  // carousel
+  $('.carousel').carousel({
+    interval: 10000
+  }); // 選擇時間
 
-  $('.js-wishlist').on('click', function (e) {
-    e.preventDefault();
-    alertInfoModal('已加入我的收藏');
+  $('#js-datepicker').daterangepicker({
+    "autoApply": true
+  }, function (start, end) {
+    document.getElementById("js-datepicker-content").innerText = "".concat(start.format('YYYY-MM-DD'), " - ").concat(end.format('YYYY-MM-DD'));
+  }); // serach resault
+
+  var searchResultSortId = 'js-sort';
+  $('.searchResult').click(function (e) {
+    if (e.target.id === searchResultSortId || e.target.parentElement.id === searchResultSortId) {
+      $('.searchResult-sort').toggleClass('show');
+    } else {
+      $('.searchResult-sort').removeClass('show');
+    }
+  }); // reservationDetail
+
+  $('#collapseRoomDetail').on('show.bs.collapse', function () {
+    $('.reservationDetail-collapse__toggle .material-icons').text('keyboard_arrow_up');
+    $('.js-detailPrize').css('color', 'transparent');
+    $('.js-detailPrize span').css('display', 'none');
   });
-  $('.js-addCart').on('click', function (e) {
-    e.preventDefault();
-    alertInfoModal('已加入購物車');
-  }); // 顯示彈跳視窗 - alert
+  $('#collapseRoomDetail').on('hide.bs.collapse', function () {
+    $('.reservationDetail-collapse__toggle .material-icons').text('keyboard_arrow_down');
+    $('.js-detailPrize').css('display', 'block');
+    $('.js-detailPrize').css('color', '#000');
+    $('.js-detailPrize span').css('display', 'inline');
+  }); // Initialize Swiper
 
-  function alertInfoModal() {
-    var alertText = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    $('#alertInfoModal').modal('show');
-    document.getElementById("alertText").innerText = alertText;
-    setTimeout(function () {
-      $('#alertInfoModal').modal('hide');
-    }, 3000);
-  }
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4
+      }
+    }
+  });
 });
 //# sourceMappingURL=app.js.map
