@@ -1,148 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALOHA</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style/all.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALOHA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style/all.css">
-
-</head>
-
-<body>
-  <section class="sticky-top bg-white">
-    <div class="container">
-      <nav class="navbar navbar-expand-md navbar-light pt-md-5 pb-md-5">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/logo-aloha.svg" loading="lazy">
-        </a>
-        <a href="login.html" class="nav-link d-md-none">
-          Login
-        </a>
-        <div class="collapse navbar-collapse" id="mobileMenu">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown p-2 p-md-0">
-              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="material-icons">
-                  language
-                </span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">English</a>
-                <a class="dropdown-item" href="#">日文</a>
-                <a class="dropdown-item" href="#">polski</a>
-              </div>
-            </li>
-            <li class="nav-item p-2 p-md-0">
-              <a class="nav-link" href="#">Sign up </a>
-            </li>
-            <li class="nav-item d-none d-md-flex">
-              <a class="nav-link pr-0" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="bg-secondary">
-      <form class="container d-none d-md-flex pt-md-4 pb-md-4">
-        <!-- 選擇目的 -->
-        <div class="form-control p-0 btn-group mr-2 dropnone border-white">
-          <button id="btnDestination" type="button" class="btn d-flex align-items-center dropdown-toggle text-info"
-            data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-            <span class="material-icons mr-2 text-dark">
-              location_on
-            </span>
-            <div data-name="selectHotel-location" class="text-left">
-              <p class="text-dark fsz-1 font-weight-bold">DESTINATION</p>
-              <p class="text-info fsz-1">Bangkok, Thailand</p>
-            </div>
+  <body>
+    <section class="sticky-top bg-white">
+      <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light pt-md-5 pb-md-5">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#mobileMenu"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
-            <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-5 mr-1">star</span>
-              <div>
-                <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-info">Thailand</p>
-              </div>
-            </a>
-            <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-5 mr-1">star</span>
-              <div>
-                <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-info">Thailand</p>
-              </div>
-            </a>
-            <a class="dropdown-item d-flex" href="#">
-              <span class="material-icons iconSize-5 mr-1">star</span>
-              <div>
-                <p class="fsz-2">Bangkok</p>
-                <p class="fsz-1 text-info">Thailand</p>
-              </div>
-            </a>
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/booking-week8/logo-aloha.svg"
+              loading="lazy"
+            />
+          </a>
+          <a href="login.html" class="nav-link d-md-none"> Login </a>
+          <div class="collapse navbar-collapse" id="mobileMenu">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown p-2 p-md-0">
+                <a
+                  class="nav-link dropdown-toggle d-flex align-items-center"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="material-icons"> language </span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">日文</a>
+                  <a class="dropdown-item" href="#">polski</a>
+                </div>
+              </li>
+              <li class="nav-item p-2 p-md-0">
+                <a class="nav-link" href="#">Sign up </a>
+              </li>
+              <li class="nav-item d-none d-md-flex">
+                <a class="nav-link pr-0" href="login.html">Login</a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <!-- 選擇時間 -->
-        <div class="form-control p-0 btn-group mr-2 border-white">
-          <button id="js-datepicker" type="button" class="btn d-flex align-items-center text-left">
-            <span class="material-icons mr-2">
-              date_range
-            </span>
-            <div id="js-datepicker-content">
-              <p class="text-dark fsz-1 font-weight-bold">Check-in / Check-out</p>
-              <p class="text-info fsz-1">17 June - 19 June</p>
+        </nav>
+      </div>
+      <div class="bg-secondary">
+        <form class="container d-none d-md-flex pt-md-4 pb-md-4">
+          <!-- 選擇目的 -->
+          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+            <button
+              id="btnDestination"
+              type="button"
+              class="btn d-flex align-items-center dropdown-toggle text-info"
+              data-toggle="dropdown"
+              aria-haspopup="false"
+              aria-expanded="false"
+            >
+              <span class="material-icons mr-2 text-dark"> location_on </span>
+              <div data-name="selectHotel-location" class="text-left">
+                <p class="text-dark fsz-1 font-weight-bold">DESTINATION</p>
+                <p class="text-info fsz-1">Bangkok, Thailand</p>
+              </div>
+            </button>
+            <div class="dropdown-menu w-100" aria-labelledby="btnDestination">
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-info">Thailand</p>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-info">Thailand</p>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex" href="#">
+                <span class="material-icons iconSize-5 mr-1">star</span>
+                <div>
+                  <p class="fsz-2">Bangkok</p>
+                  <p class="fsz-1 text-info">Thailand</p>
+                </div>
+              </a>
             </div>
-          </button>
-        </div>
-        <!-- 選擇人數 -->
-        <div class="form-control p-0 btn-group mr-2 dropnone border-white">
-          <button id="btnGuest" type="button" class="btn d-flex align-items-center dropdown-toggle text-info" data-toggle="dropdown"
-            aria-haspopup="false" aria-expanded="false">
-            <span class="material-icons mr-2 text-dark">
-              person
-            </span>
-            <div data-name="selectHotel-guest" class="text-left">
-              <p class="text-dark fsz-1 font-weight-bold">GUESTS</p>
-              <p class="text-info fsz-1">2 adults・1 room</p>
-            </div>
-          </button>
-          <ul class="dropdown-menu py-2 bg-white w-100" aria-labelledby="btnGuest">
-            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-              <p>Adult</p>
-              <p class="d-flex justify-content-between align-items-center">
-                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                <span>2</span>
-                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-              </p>
-            </li>
-            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-              <p>Kid</p>
-              <p class="d-flex justify-content-between align-items-center">
-                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                <span>2</span>
-                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-              </p>
-            </li>
-            <li class="dropdown-item d-flex justify-content-between align-items-center py-2">
-              <p>room</p>
-              <p class="d-flex justify-content-between align-items-center">
-                <a href="#"><span class="iconSize-3 material-icons mr-4">remove</span></a>
-                <span>2</span>
-                <a href="#"><span class="iconSize-3 material-icons ml-4">add</span></a>
-              </p>
-            </li>
-          </ul>
-        </div>
-        <!-- 搜尋 -->
-        <a href="searchResult.html" class="btn btn-primary py-3 px-5" type="button">SEARCH</a>
-      </form>
-    </div>
-  </section>
-  <main class="reservationDetail mb-10">
-    <section class="container pt-md-5 pb-8">
+          </div>
+          <!-- 選擇時間 -->
+          <div class="form-control p-0 btn-group mr-2 border-white">
+            <button
+              id="js-datepicker"
+              type="button"
+              class="btn d-flex align-items-center text-left"
+            >
+              <span class="material-icons mr-2"> date_range </span>
+              <div id="js-datepicker-content">
+                <p class="text-dark fsz-1 font-weight-bold">
+                  Check-in / Check-out
+                </p>
+                <p class="text-info fsz-1">17 June - 19 June</p>
+              </div>
+            </button>
+          </div>
+          <!-- 選擇人數 -->
+          <div class="form-control p-0 btn-group mr-2 dropnone border-white">
+            <button
+              id="btnGuest"
+              type="button"
+              class="btn d-flex align-items-center dropdown-toggle text-info"
+              data-toggle="dropdown"
+              aria-haspopup="false"
+              aria-expanded="false"
+            >
+              <span class="material-icons mr-2 text-dark"> person </span>
+              <div data-name="selectHotel-guest" class="text-left">
+                <p class="text-dark fsz-1 font-weight-bold">GUESTS</p>
+                <p class="text-info fsz-1">2 adults・1 room</p>
+              </div>
+            </button>
+            <ul
+              class="dropdown-menu py-2 bg-white w-100"
+              aria-labelledby="btnGuest"
+            >
+              <li
+                class="
+                  dropdown-item
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  py-2
+                "
+              >
+                <p>Adult</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons mr-4"
+                      >remove</span
+                    ></a
+                  >
+                  <span>2</span>
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons ml-4">add</span></a
+                  >
+                </p>
+              </li>
+              <li
+                class="
+                  dropdown-item
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  py-2
+                "
+              >
+                <p>Kid</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons mr-4"
+                      >remove</span
+                    ></a
+                  >
+                  <span>2</span>
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons ml-4">add</span></a
+                  >
+                </p>
+              </li>
+              <li
+                class="
+                  dropdown-item
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                  py-2
+                "
+              >
+                <p>room</p>
+                <p class="d-flex justify-content-between align-items-center">
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons mr-4"
+                      >remove</span
+                    ></a
+                  >
+                  <span>2</span>
+                  <a href="#"
+                    ><span class="iconSize-3 material-icons ml-4">add</span></a
+                  >
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- 搜尋 -->
+          <a
+            href="searchResult.html"
+            class="btn btn-primary py-3 px-5"
+            type="button"
+            >SEARCH</a
+          >
+        </form>
+      </div>
+    </section>
+    <main class="reservationDetail mb-10"><section class="container pt-md-5 pb-8">
   <div class="row align-items-start justify-content-center">
     <!-- mobile / 查看detail  -->
     <div class="col-12 bg-secondary pt-2 pb-2 d-flex fx-btc d-md-none mb-4">
@@ -240,20 +317,28 @@
       </ul>
     </div>
   </div>
-</section>
-  </main>
-  <footer class="container fixed-md-bottom">
-    <div class="d-md-flex justify-content-center justify-content-md-between align-items-center py-4 border-top">
-      <ul class="d-flex text-info pl-md-5 justify-content-center">
-        <li><a class="fsz-2" href="#">FAQs</a></li>
-        <li class="ml-4"><a class="fsz-2" href="#">Terms of use</a></li>
-        <li class="ml-4"><a class="fsz-2" href="#">Privacy policy</a></li>
-      </ul>
-      <p class="fsz-2 ml-md-4 order-1 text-center text-info">© 2020. All Rights Reserved.</p>
-    </div>
-  </footer>
-  <script src="assets/js/vendors.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
-
+</section></main>
+    <footer class="container fixed-md-bottom">
+      <div
+        class="
+          d-md-flex
+          justify-content-center justify-content-md-between
+          align-items-center
+          py-4
+          border-top
+        "
+      >
+        <ul class="d-flex text-info pl-md-5 justify-content-center">
+          <li><a class="fsz-2" href="#">FAQs</a></li>
+          <li class="ml-4"><a class="fsz-2" href="#">Terms of use</a></li>
+          <li class="ml-4"><a class="fsz-2" href="#">Privacy policy</a></li>
+        </ul>
+        <p class="fsz-2 ml-md-4 order-1 text-center text-info">
+          © 2020. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="assets/js/vendors.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
